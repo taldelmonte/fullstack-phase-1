@@ -1,347 +1,414 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudySpot | Compare</title>
+  <title>StudySpot | Compare Study Places</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-  <!-- Main navigation. -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">StudySpot</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">StudySpot</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="places.html">Study Places</a>
+      <a href="compare.html">Compare</a>
+      <a href="contact.html">Suggest a Place</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="places.html">Study Places</a>
-        <a href="compare.html">Compare</a>
-        <a href="contact.html">Suggest a Place</a>
-      </nav>
+<main>
+
+  <!-- Page introduction -->
+  <section class="page-intro">
+    <div class="container">
+      <h1>Compare Study Places</h1>
+      <p>
+        Compare study locations across Israel and
+        choose the right environment for you.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <main>
+  <!-- Comparison table and filters -->
+  <section class="section">
+    <div class="container">
 
-    <!-- Page introduction. -->
-    <section class="page-intro">
-      <div class="container">
-        <h1>Compare Study Places</h1>
+      <div class="section-heading">
+        <h2>Study Place Comparison</h2>
         <p>
-          Compare real locations in Israel
-          and choose the right environment for you.
+          Filter by place type and location to find
+          study spots that match your preferences.
         </p>
       </div>
-    </section>
 
-    <!-- Comparison table with category filters. -->
-    <section class="section">
-      <div class="container">
+      <div class="comparison-area">
 
-        <div class="section-heading">
-          <h2>Study Place Comparison</h2>
-          <p>Select a category to narrow your results.</p>
+        <!-- Place type radio buttons -->
+        <input type="radio" id="filter-all"
+               name="place-filter" checked>
+        <input type="radio" id="filter-library"
+               name="place-filter">
+        <input type="radio" id="filter-cafe"
+               name="place-filter">
+        <input type="radio" id="filter-workspace"
+               name="place-filter">
+
+        <!-- Region radio buttons -->
+        <input type="radio" id="region-all"
+               name="region-filter" checked>
+        <input type="radio" id="region-jerusalem"
+               name="region-filter">
+        <input type="radio" id="region-center"
+               name="region-filter">
+        <input type="radio" id="region-north"
+               name="region-filter">
+        <input type="radio" id="region-south"
+               name="region-filter">
+
+        <!-- Place type controls -->
+        <h3>Choose Place Type</h3>
+
+        <div class="filter-controls">
+          <label for="filter-all">All Places</label>
+          <label for="filter-library">Libraries</label>
+          <label for="filter-cafe">Cafes</label>
+          <label for="filter-workspace">Workspaces</label>
         </div>
 
-        <div class="comparison-area">
+        <!-- Region controls -->
+        <h3>Choose Location</h3>
 
-          <!-- Category filter radio buttons. -->
-          <input
-            type="radio"
-            id="filter-all"
-            name="place-filter"
-            checked>
-
-          <input
-            type="radio"
-            id="filter-library"
-            name="place-filter">
-
-          <input
-            type="radio"
-            id="filter-cafe"
-            name="place-filter">
-
-          <input
-            type="radio"
-            id="filter-workspace"
-            name="place-filter">
-
-          <!-- Clickable category filter labels. -->
-          <div class="filter-controls">
-            <label for="filter-all">All Places</label>
-            <label for="filter-library">Libraries</label>
-            <label for="filter-cafe">Cafes</label>
-            <label for="filter-workspace">Workspaces</label>
-          </div>
-
-          <!-- Table containing the current locations. -->
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr>
-                  <th>Place</th>
-                  <th>Type</th>
-                  <th>City</th>
-                  <th>Best For</th>
-                  <th>Access</th>
-                </tr>
-              </thead>
-
-              <tbody>
-
-                <!-- Libraries -->
-                <tr class="library-row">
-                  <td>National Library of Israel</td>
-                  <td>Library</td>
-                  <td>Jerusalem</td>
-                  <td>Reading and research</td>
-                  <td>Check visitor rules</td>
-                </tr>
-
-                <tr class="library-row">
-                  <td>Bar-Ilan Central Library</td>
-                  <td>Library</td>
-                  <td>Ramat Gan</td>
-                  <td>Academic research</td>
-                  <td>Check visitor rules</td>
-                </tr>
-
-                <tr class="library-row">
-                  <td>Bloomfield Library</td>
-                  <td>Library</td>
-                  <td>Jerusalem</td>
-                  <td>Academic study</td>
-                  <td>Check visitor rules</td>
-                </tr>
-
-                <tr class="library-row">
-                  <td>Sourasky Central Library</td>
-                  <td>Library</td>
-                  <td>Tel Aviv</td>
-                  <td>Reading and research</td>
-                  <td>Check visitor rules</td>
-                </tr>
-
-                <tr class="library-row">
-                  <td>University of Haifa Library</td>
-                  <td>Library</td>
-                  <td>Haifa</td>
-                  <td>Research</td>
-                  <td>Check visitor rules</td>
-                </tr>
-
-                <tr class="library-row">
-                  <td>Aranne Library</td>
-                  <td>Library</td>
-                  <td>Beer Sheva</td>
-                  <td>Academic study</td>
-                  <td>Check visitor rules</td>
-                </tr>
-
-                <!-- Cafes -->
-                <tr class="cafe-row">
-                  <td>Harry's Cafe</td>
-                  <td>Cafe</td>
-                  <td>Jerusalem</td>
-                  <td>Coffee break</td>
-                  <td>Check seating policy</td>
-                </tr>
-
-                <tr class="cafe-row">
-                  <td>Cafe Landwer (branches)</td>
-                  <td>Cafe</td>
-                  <td>Tel Aviv</td>
-                  <td>Casual meetings</td>
-                  <td>Varies by branch</td>
-                </tr>
-
-                <tr class="cafe-row">
-                  <td>Aroma Espresso Bar (branches)</td>
-                  <td>Cafe</td>
-                  <td>Jerusalem</td>
-                  <td>Casual meetings</td>
-                  <td>Varies by branch</td>
-                </tr>
-
-                <!-- Workspaces -->
-                <tr class="workspace-row">
-                  <td>WeWork (locations)</td>
-                  <td>Workspace</td>
-                  <td>Tel Aviv</td>
-                  <td>Professional work</td>
-                  <td>Check membership</td>
-                </tr>
-
-                <tr class="workspace-row">
-                  <td>Mindspace (locations)</td>
-                  <td>Workspace</td>
-                  <td>Tel Aviv</td>
-                  <td>Collaboration</td>
-                  <td>Check membership</td>
-                </tr>
-
-                <tr class="workspace-row">
-                  <td>Regus (locations)</td>
-                  <td>Workspace</td>
-                  <td>Multiple cities</td>
-                  <td>Professional work</td>
-                  <td>Check booking</td>
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
-
+        <div class="filter-controls">
+          <label for="region-all">All Israel</label>
+          <label for="region-jerusalem">Jerusalem Area</label>
+          <label for="region-center">Tel Aviv &amp; Center</label>
+          <label for="region-north">North</label>
+          <label for="region-south">South</label>
         </div>
+
+        <!-- Comparison table -->
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Place</th>
+                <th>Type</th>
+                <th>City</th>
+                <th>Best For</th>
+                <th>Access</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <!-- Libraries -->
+              <tr class="library-row jerusalem-row">
+                <td>National Library of Israel</td>
+                <td>Library</td>
+                <td>Jerusalem</td>
+                <td>Reading and research</td>
+                <td>Check visitor rules</td>
+              </tr>
+
+              <tr class="library-row center-row">
+                <td>Bar-Ilan Central Library</td>
+                <td>Library</td>
+                <td>Ramat Gan</td>
+                <td>Academic research</td>
+                <td>Check visitor rules</td>
+              </tr>
+
+              <tr class="library-row jerusalem-row">
+                <td>Bloomfield Library</td>
+                <td>Library</td>
+                <td>Jerusalem</td>
+                <td>Academic study</td>
+                <td>Check visitor rules</td>
+              </tr>
+
+              <tr class="library-row center-row">
+                <td>Sourasky Central Library</td>
+                <td>Library</td>
+                <td>Tel Aviv</td>
+                <td>Research and reading</td>
+                <td>Check visitor rules</td>
+              </tr>
+
+              <tr class="library-row north-row">
+                <td>University of Haifa Library</td>
+                <td>Library</td>
+                <td>Haifa</td>
+                <td>Research</td>
+                <td>Check visitor rules</td>
+              </tr>
+
+              <tr class="library-row south-row">
+                <td>Aranne Library</td>
+                <td>Library</td>
+                <td>Beer Sheva</td>
+                <td>Academic study</td>
+                <td>Check visitor rules</td>
+              </tr>
+
+              <!-- Cafes -->
+              <tr class="cafe-row jerusalem-row">
+                <td>Harry's Cafe</td>
+                <td>Cafe</td>
+                <td>Jerusalem</td>
+                <td>Coffee breaks</td>
+                <td>Check seating policy</td>
+              </tr>
+
+              <tr class="cafe-row center-row">
+                <td>Cafe Landwer</td>
+                <td>Cafe</td>
+                <td>Tel Aviv</td>
+                <td>Casual meetings</td>
+                <td>Varies by branch</td>
+              </tr>
+
+              <tr class="cafe-row jerusalem-row">
+                <td>Aroma Espresso Bar</td>
+                <td>Cafe</td>
+                <td>Jerusalem</td>
+                <td>Informal meetings</td>
+                <td>Varies by branch</td>
+              </tr>
+
+              <tr class="cafe-row north-row">
+                <td>Cafe Joe - University of Haifa</td>
+                <td>Cafe</td>
+                <td>Haifa</td>
+                <td>Campus coffee breaks</td>
+                <td>Check seating policy</td>
+              </tr>
+
+              <tr class="cafe-row center-row">
+                <td>Cafe Joe - Bat Yam</td>
+                <td>Cafe</td>
+                <td>Bat Yam</td>
+                <td>Relaxed breaks</td>
+                <td>Check seating policy</td>
+              </tr>
+
+              <tr class="cafe-row center-row">
+                <td>Arcaffe - Ra'anana</td>
+                <td>Cafe</td>
+                <td>Ra'anana</td>
+                <td>Reading and meetings</td>
+                <td>Check seating policy</td>
+              </tr>
+
+              <tr class="cafe-row center-row">
+                <td>Arcaffe - Poleg</td>
+                <td>Cafe</td>
+                <td>Netanya</td>
+                <td>Informal work</td>
+                <td>Check seating policy</td>
+              </tr>
+
+              <tr class="cafe-row center-row">
+                <td>Cafe Joe - Marom Naveh</td>
+                <td>Cafe</td>
+                <td>Ramat Gan</td>
+                <td>Casual meetings</td>
+                <td>Check seating policy</td>
+              </tr>
+
+              <!-- Workspaces -->
+              <tr class="workspace-row center-row">
+                <td>WeWork</td>
+                <td>Workspace</td>
+                <td>Tel Aviv</td>
+                <td>Professional work</td>
+                <td>Check membership</td>
+              </tr>
+
+              <tr class="workspace-row center-row">
+                <td>Mindspace</td>
+                <td>Workspace</td>
+                <td>Tel Aviv</td>
+                <td>Collaboration</td>
+                <td>Check membership</td>
+              </tr>
+
+              <tr class="workspace-row center-row">
+                <td>Regus</td>
+                <td>Workspace</td>
+                <td>Tel Aviv area</td>
+                <td>Professional work</td>
+                <td>Check booking</td>
+              </tr>
+
+              <tr class="workspace-row center-row">
+                <td>ROOMS by Fattal</td>
+                <td>Workspace</td>
+                <td>Tel Aviv</td>
+                <td>Meetings and focused work</td>
+                <td>Check booking</td>
+              </tr>
+
+              <tr class="workspace-row jerusalem-row">
+                <td>Urban Place</td>
+                <td>Workspace</td>
+                <td>Jerusalem</td>
+                <td>Collaborative projects</td>
+                <td>Check booking</td>
+              </tr>
+
+              <tr class="workspace-row center-row">
+                <td>ROOMS - Petah Tikva</td>
+                <td>Workspace</td>
+                <td>Petah Tikva</td>
+                <td>Teamwork and meetings</td>
+                <td>Check booking</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+      <p class="note">
+        Opening hours, availability and visitor access
+        must be confirmed directly with each location.
+      </p>
+    </div>
+  </section>
+
+  <!-- Study guide and video -->
+  <section class="section">
+    <div class="container info-layout compare-info">
+
+      <article class="panel">
+        <h2>How to Choose Your Study Space</h2>
 
         <p>
-          <em>
-            Availability and visitor access must be
-            confirmed directly with each location.
-          </em>
+          The right environment can make studying
+          more comfortable and productive.
         </p>
-      </div>
-    </section>
 
-    <!-- Study guide and study session content. -->
-    <section class="section">
-      <div class="container info-layout">
+        <div class="guide-content">
 
-        <!-- Study guide panel. -->
-        <div class="panel">
-
-          <h2>How to Choose Your Study Space</h2>
-
+          <h3>1. Choose the Right Noise Level</h3>
           <p>
-            The right environment can make studying
-            more comfortable and productive.
+            Quiet libraries may be useful for exam
+            preparation, while cafes may be suitable
+            for more relaxed activities.
           </p>
 
-          <div class="guide-content">
-
-            <h3>1. Choose the Right Noise Level</h3>
-            <p>
-              Quiet libraries can be useful for exam
-              preparation, while cafes may be suitable
-              for more relaxed activities.
-            </p>
-
-            <h3>2. Check Essential Facilities</h3>
-            <ul>
-              <li>Reliable Wi-Fi</li>
-              <li>Power outlets</li>
-              <li>Comfortable seating</li>
-              <li>Good lighting</li>
-              <li>Suitable opening hours</li>
-            </ul>
-
-            <h3>3. Consider Your Study Activity</h3>
-            <p>
-              Individual learning may require a quiet
-              location. Group projects may benefit
-              from a collaborative workspace.
-            </p>
-
-            <h3>4. Plan Your Visit</h3>
-            <p>
-              Check opening hours, access rules,
-              reservations and possible fees.
-            </p>
-
-          </div>
-
-          <!-- Open the PDF guide in a separate tab. -->
-          <p>
-            <a
-              class="button"
-              href="media/study-guide.pdf"
-              target="_blank"
-              rel="noopener noreferrer">
-              Open the Study Guide PDF
-            </a>
-          </p>
-        </div>
-
-        <!-- Study session panel without blocked video embeds. -->
-        <aside class="panel">
-
-          <h2>Study With Me</h2>
-
-          <p>
-            Looking for motivation? Try a guided
-            study session or relaxing background sounds.
-          </p>
-
-          <img
-            src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800"
-            alt="Books and study materials on a desk">
-
-          <h3>Study Session Tips</h3>
-
+          <h3>2. Check Essential Facilities</h3>
           <ul>
-            <li>Prepare your materials before starting.</li>
-            <li>Set a clear goal for your session.</li>
-            <li>Reduce unnecessary distractions.</li>
-            <li>Take short breaks when needed.</li>
+            <li>Reliable Wi-Fi</li>
+            <li>Power outlets</li>
+            <li>Comfortable seating</li>
+            <li>Good lighting</li>
+            <li>Suitable opening hours</li>
           </ul>
 
-          <!-- Open study videos directly on YouTube. -->
+          <h3>3. Consider Your Study Activity</h3>
           <p>
-            <a
-              class="button"
-              href="https://www.youtube.com/results?search_query=study+with+me+pomodoro"
-              target="_blank"
-              rel="noopener noreferrer">
-              Watch Study With Me Videos
-            </a>
+            Individual learning may require a quiet
+            location. Group projects may benefit
+            from a collaborative workspace.
           </p>
 
+          <h3>4. Plan Your Visit</h3>
           <p>
-            <a href="places.html">
-              Explore Study Places
-            </a>
+            Check opening hours, visitor rules,
+            reservations and possible fees.
           </p>
 
-        </aside>
-      </div>
-    </section>
-
-    <!-- Final navigation section. -->
-    <section class="section highlight-section">
-      <div class="container panel">
-
-        <h2>Ready to Find Your Study Spot?</h2>
+        </div>
 
         <p>
-          Browse real locations across Israel
-          and choose your next study destination.
+          <a class="button"
+             href="media/study-guide.pdf"
+             target="_blank">
+            Open Study Guide PDF
+          </a>
+        </p>
+      </article>
+
+      <aside class="panel">
+        <h2>Why Your Study Environment Matters</h2>
+
+        <p>
+          A comfortable study environment can help
+          reduce distractions and support concentration.
         </p>
 
+        <!-- Existing YouTube video placeholder -->
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/gvNwAN3wvrw"
+            title="Study environment and concentration"
+            loading="lazy"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <p>
+          If the video cannot play here,
+          open it directly on YouTube.
+        </p>
+
+        <a class="button"
+           href="https://www.youtube.com/watch?v=gvNwAN3wvrw"
+           target="_blank">
+          Watch Video on YouTube
+        </a>
+
+        <h3>Study Session Tips</h3>
+        <ul>
+          <li>Prepare your materials before starting.</li>
+          <li>Set a clear goal for each session.</li>
+          <li>Reduce unnecessary distractions.</li>
+          <li>Choose comfortable seating and good lighting.</li>
+          <li>Take short breaks when needed.</li>
+        </ul>
+
+        <a href="places.html">Explore Study Places</a>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Final section -->
+  <section class="section highlight-section">
+    <div class="container">
+      <div class="panel">
+        <h2>Ready to Find Your Study Spot?</h2>
+        <p>
+          Browse study locations across Israel
+          and choose your next study destination.
+        </p>
         <a class="button" href="places.html">
           Browse Study Places
         </a>
       </div>
-    </section>
-
-  </main>
-
-  <!-- Shared footer. -->
-  <footer class="site-footer">
-    <div class="container footer-layout">
-      <span>StudySpot © 2026 | Student project</span>
-
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="places.html">Study Places</a>
-        <a href="contact.html">Suggest a Place</a>
-      </div>
     </div>
-  </footer>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-layout">
+    <span>StudySpot © 2026 | Student Project</span>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="places.html">Study Places</a>
+      <a href="compare.html">Compare</a>
+      <a href="contact.html">Suggest a Place</a>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

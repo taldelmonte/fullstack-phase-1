@@ -1,45 +1,55 @@
 
-/* ======================================== */
-/* GENERAL WEBSITE STYLING */
-/* ======================================== */
+/* ========================================
+   GENERAL WEBSITE STYLING
+   ======================================== */
 
-/* Apply border-box sizing to all elements. */
 * {
   box-sizing: border-box;
 }
 
-/* Set the main font, colors and page background. */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
   color: #243247;
   background: #f5f8fc;
-  line-height: 1.6;
 }
 
-/* Remove the default underline from links. */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-/* Prevent images from overflowing their containers. */
-img {
-  max-width: 100%;
-  display: block;
+a:hover {
+  color: #0b8798;
 }
 
-/* Set a wide and centered content container. */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
 .container {
   width: 94%;
   max-width: 1380px;
   margin: 0 auto;
 }
 
-
-/* ======================================== */
-/* HEADER AND NAVIGATION */
-/* ======================================== */
+/* ========================================
+   HEADER AND NAVIGATION
+   ======================================== */
 
 .site-header {
   background: #ffffff;
@@ -54,317 +64,460 @@ img {
   padding: 18px 0;
 }
 
-/* Website logo. */
 .logo {
   font-size: 25px;
   font-weight: bold;
   color: #146c79;
 }
 
-/* Arrange navigation links horizontally. */
 .nav-links {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 20px;
 }
 
-/* Highlight navigation links on hover or focus. */
 .nav-links a:hover,
 .nav-links a:focus {
   color: #0b8798;
   text-decoration: underline;
 }
 
+/* ========================================
+   HERO SECTION
+   ======================================== */
 
-/* ======================================== */
-/* HOME PAGE HERO SECTION */
-/* ======================================== */
-
-/* Main introduction section on the home page. */
 .hero {
   background: #dff4f3;
-  padding: 85px 0;
+  padding: 65px 0;
 }
 
-/* Display hero text and image side by side. */
 .hero-layout {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   align-items: center;
-  gap: 65px;
+  gap: 45px;
 }
 
-/* Main heading. */
 .hero h1 {
-  font-size: 52px;
+  font-size: 44px;
   line-height: 1.2;
-  margin: 0 0 16px;
+  margin: 14px 0 16px;
 }
 
-/* Hero description. */
 .hero p {
-  font-size: 19px;
+  font-size: 18px;
+  margin-bottom: 24px;
 }
 
-/* Main hero image. */
 .hero img {
   width: 100%;
-  height: 420px;
+  height: 340px;
   object-fit: cover;
   border-radius: 18px;
 }
 
+/* ========================================
+   BUTTONS
+   ======================================== */
 
-/* ======================================== */
-/* BUTTONS */
-/* ======================================== */
-
-/* Shared button design across the website. */
 .button {
   display: inline-block;
-  padding: 12px 22px;
+  padding: 11px 20px;
   background: #126d7a;
   color: #ffffff;
   border: 0;
   border-radius: 8px;
-  font: inherit;
+  font-size: 15px;
+  text-align: center;
   cursor: pointer;
 }
 
-/* Darken buttons when hovered or focused. */
 .button:hover,
 .button:focus {
   background: #0b4c55;
+  color: #ffffff;
 }
 
+/* ========================================
+   GENERAL SECTIONS
+   ======================================== */
 
-/* ======================================== */
-/* GENERAL SECTIONS */
-/* ======================================== */
-
-/* Consistent spacing between website sections. */
 .section {
-  padding: 48px 0;
+  padding: 42px 0;
 }
 
-/* Shared section headings. */
 .section h2 {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 28px;
 }
 
-/* Space between section headings and content. */
 .section-heading {
-  margin-bottom: 28px;
+  margin-bottom: 22px;
 }
 
-/* Secondary description text. */
 .section-heading p {
   color: #65758a;
+  margin: 8px 0;
 }
 
-/* Background for highlighted sections. */
 .highlight-section {
   background: #e6f3f6;
 }
 
+/* ========================================
+   STUDY PLACE CARDS
+   ======================================== */
 
-/* ======================================== */
-/* STUDY PLACE CARDS */
-/* ======================================== */
-
-/* Display three cards per row on large screens. */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
 }
 
-/* Individual study place card. */
 .card {
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Add a subtle animation when hovering over cards. */
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px #dbe4eb;
-}
-
-/* Keep card images at a consistent height. */
 .card img {
   width: 100%;
-  height: 230px;
+  height: 210px;
   object-fit: cover;
 }
 
-/* Inner spacing for card information. */
 .card-content {
-  padding: 24px;
+  padding: 20px;
 }
 
-/* Card titles. */
 .card h3 {
-  margin-top: 0;
+  font-size: 20px;
+  margin: 8px 0 12px;
 }
 
-/* Space between list items inside cards. */
-.card-content ul {
-  padding-left: 20px;
+.card-content p {
+  margin: 10px 0;
 }
 
-.card-content li {
-  margin-bottom: 6px;
+.card-content a:not(.button) {
+  color: #126d7a;
 }
 
-/* Small category labels displayed on cards. */
+.card-content a:not(.button):hover {
+  text-decoration: underline;
+}
+
 .tag {
   display: inline-block;
   background: #e4f5ee;
   color: #22634d;
   padding: 4px 10px;
   border-radius: 20px;
+  font-size: 13px;
+}
+
+/* ========================================
+   COMPACT HOME CATEGORIES
+   ======================================== */
+
+.home-categories {
+  padding: 30px 0;
+}
+
+.home-categories .section-heading {
+  margin-bottom: 18px;
+}
+
+.home-categories .section-heading h2 {
+  font-size: 25px;
+}
+
+.home-categories .card-grid {
+  gap: 18px;
+}
+
+.home-categories .card img {
+  height: 155px;
+}
+
+.home-categories .card-content {
+  padding: 16px;
+}
+
+.home-categories .card h3 {
+  font-size: 18px;
+}
+
+.home-categories .card p {
   font-size: 14px;
+  margin: 8px 0;
 }
 
-/* Additional information about study places. */
-.place-details {
-  color: #526477;
-  font-size: 14px;
-}
+/* ========================================
+   COMPACT HOME FEATURES
+   ======================================== */
 
-.place-details strong {
-  color: #243247;
-}
-
-
-/* ======================================== */
-/* HOME PAGE FEATURES */
-/* ======================================== */
-
-/* White section displaying website benefits. */
 .feature-strip {
   background: #ffffff;
-  padding: 32px 0;
+  padding: 16px 0;
 }
 
-/* Display three feature items in one row. */
 .feature-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
-/* Individual feature item. */
 .feature-item {
   text-align: center;
-  padding: 18px;
+  padding: 10px;
 }
 
-/* Feature titles. */
 .feature-item h3 {
   color: #126d7a;
-  margin-bottom: 5px;
+  font-size: 18px;
+  margin: 0 0 6px;
 }
 
+.feature-item p {
+  font-size: 14px;
+  margin: 0;
+}
 
-/* ======================================== */
-/* INNER PAGE INTRODUCTION */
-/* ======================================== */
+/* ========================================
+   COMPACT POPULAR PLACES
+   ======================================== */
 
-/* Introduction section for inner pages. */
+.home-popular {
+  padding: 30px 0;
+}
+
+.home-popular .section-heading {
+  margin-bottom: 18px;
+}
+
+.home-popular .section-heading h2 {
+  font-size: 25px;
+}
+
+.home-popular .card-grid {
+  gap: 18px;
+}
+
+.home-popular .card img {
+  height: 155px;
+}
+
+.home-popular .card-content {
+  padding: 16px;
+}
+
+.home-popular .card h3 {
+  font-size: 18px;
+}
+
+.home-popular .card p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+/* ========================================
+   INNER PAGE INTRODUCTION
+   ======================================== */
+
 .page-intro {
   background: #e6f3f6;
   padding: 40px 0;
 }
 
+.page-intro h1 {
+  font-size: 34px;
+  line-height: 1.3;
+  margin: 0 0 14px;
+}
 
-/* ======================================== */
-/* INFORMATION PANELS */
-/* ======================================== */
+.page-intro p {
+  margin: 0 0 18px;
+}
 
-/* Display information panels in two columns. */
+.category-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.category-links a {
+  color: #126d7a;
+  font-weight: bold;
+}
+
+.category-links a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   HORIZONTAL CAROUSEL WITHOUT ARROWS
+   ======================================== */
+
+.places-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 44px) / 3);
+  gap: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 10px 2px 20px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+}
+
+.places-carousel .card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.places-carousel .card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.places-carousel .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 18px;
+}
+
+.places-carousel .card h3 {
+  font-size: 19px;
+  margin: 8px 0 12px;
+}
+
+.places-carousel .card-content p {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.places-carousel .button {
+  margin-top: auto;
+  font-size: 14px;
+  padding: 10px 16px;
+}
+
+.carousel-hint {
+  color: #65758a;
+  font-size: 14px;
+  margin: 10px 0 0;
+}
+
+/* ========================================
+   INFORMATION PANELS
+   ======================================== */
+
 .info-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 28px;
+  align-items: start;
 }
 
-/* Shared white panel design. */
 .panel {
+  min-width: 0;
   padding: 24px;
   background: #ffffff;
-  border-radius: 14px;
   border: 1px solid #e2e8f0;
+  border-radius: 14px;
 }
 
+.panel h2 {
+  margin-top: 0;
+}
 
-/* ======================================== */
-/* MAPS AND VIDEOS */
-/* ======================================== */
+.panel a:not(.button) {
+  color: #126d7a;
+}
 
-/* Style embedded maps and external videos. */
-.media-frame {
+.panel a:not(.button):hover {
+  text-decoration: underline;
+}
+
+/* ========================================
+   COMPARISON PAGE LAYOUT
+   ======================================== */
+
+.compare-info {
+  grid-template-columns: 1fr 1fr;
+}
+
+.compare-info .panel {
+  font-size: 16px;
+}
+
+.compare-info .panel h2 {
+  font-size: 27px;
+}
+
+.compare-info .panel h3 {
+  font-size: 20px;
+}
+
+/* ========================================
+   COMPARISON TABLE
+   ======================================== */
+
+.comparison-area {
   width: 100%;
-  min-height: 270px;
-  border: 0;
-  border-radius: 10px;
+  font-size: 16px;
 }
 
-/* Style locally embedded videos. */
-.media-video {
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
+.comparison-area h3 {
+  font-size: 20px;
+  margin: 24px 0 12px;
 }
 
-
-/* ======================================== */
-/* COMPARISON TABLE */
-/* ======================================== */
-
-/* Allow horizontal scrolling on small screens. */
 .table-wrap {
+  width: 100%;
   overflow-x: auto;
   background: #ffffff;
   border-radius: 12px;
 }
 
-/* Table dimensions and layout. */
 table {
   width: 100%;
-  border-collapse: collapse;
   min-width: 650px;
+  border-collapse: collapse;
 }
 
-/* Shared table cell styling. */
 th,
 td {
   text-align: left;
-  padding: 16px;
+  padding: 17px 18px;
+  font-size: 16px;
+  line-height: 1.6;
   border-bottom: 1px solid #dbe4eb;
 }
 
-/* Table header background. */
 th {
   background: #dff4f3;
+  font-weight: bold;
 }
 
-/* Highlight table rows on hover. */
-tr:hover {
+tbody tr:hover {
   background: #f1f9fa;
 }
 
+/* ========================================
+   CSS ONLY FILTERS
+   ======================================== */
 
-/* ======================================== */
-/* COMPARISON FILTER BUTTONS */
-/* ======================================== */
-
-/* Hide radio buttons visually but keep them functional. */
+/* Hide radio buttons visually */
 .comparison-area > input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -372,7 +525,7 @@ tr:hover {
   height: 1px;
 }
 
-/* Arrange filter buttons horizontally. */
+/* Filter labels */
 .filter-controls {
   display: flex;
   flex-wrap: wrap;
@@ -380,22 +533,21 @@ tr:hover {
   margin-bottom: 24px;
 }
 
-/* Style filter labels as clickable buttons. */
 .filter-controls label {
   display: inline-block;
   padding: 10px 20px;
   background: #ffffff;
   border: 1px solid #b9c9d3;
   border-radius: 25px;
+  font-size: 15px;
   cursor: pointer;
 }
 
-/* Change filter appearance on hover. */
 .filter-controls label:hover {
   background: #dff4f3;
 }
 
-/* Highlight the currently selected category. */
+/* Selected place type */
 #filter-all:checked ~ .filter-controls label[for="filter-all"],
 #filter-library:checked ~ .filter-controls label[for="filter-library"],
 #filter-cafe:checked ~ .filter-controls label[for="filter-cafe"],
@@ -405,90 +557,127 @@ tr:hover {
   border-color: #126d7a;
 }
 
-/* Show a visible focus outline for keyboard navigation. */
-#filter-all:focus-visible ~ .filter-controls label[for="filter-all"],
-#filter-library:focus-visible ~ .filter-controls label[for="filter-library"],
-#filter-cafe:focus-visible ~ .filter-controls label[for="filter-cafe"],
-#filter-workspace:focus-visible ~ .filter-controls label[for="filter-workspace"] {
-  outline: 3px solid #0b8798;
-  outline-offset: 3px;
+/* Selected region */
+#region-all:checked ~ .filter-controls label[for="region-all"],
+#region-jerusalem:checked ~ .filter-controls label[for="region-jerusalem"],
+#region-center:checked ~ .filter-controls label[for="region-center"],
+#region-north:checked ~ .filter-controls label[for="region-north"],
+#region-south:checked ~ .filter-controls label[for="region-south"] {
+  background: #126d7a;
+  color: #ffffff;
+  border-color: #126d7a;
 }
 
-/* Display only libraries when the library filter is selected. */
+/* Filter by place type */
 #filter-library:checked ~ .table-wrap tbody tr:not(.library-row) {
   display: none;
 }
 
-/* Display only cafes when the cafe filter is selected. */
 #filter-cafe:checked ~ .table-wrap tbody tr:not(.cafe-row) {
   display: none;
 }
 
-/* Display only workspaces when the workspace filter is selected. */
 #filter-workspace:checked ~ .table-wrap tbody tr:not(.workspace-row) {
   display: none;
 }
 
-/* When All Places is selected, all rows remain visible. */
+/* Filter by region */
+#region-jerusalem:checked ~ .table-wrap tbody tr:not(.jerusalem-row) {
+  display: none;
+}
 
+#region-center:checked ~ .table-wrap tbody tr:not(.center-row) {
+  display: none;
+}
 
-/* ======================================== */
-/* STUDY GUIDE */
-/* ======================================== */
+#region-north:checked ~ .table-wrap tbody tr:not(.north-row) {
+  display: none;
+}
 
-/* Display the study guide as readable HTML content. */
+#region-south:checked ~ .table-wrap tbody tr:not(.south-row) {
+  display: none;
+}
+
+/* ========================================
+   STUDY GUIDE
+   ======================================== */
+
 .guide-content {
   background: #f5f8fc;
   padding: 24px;
   border-radius: 12px;
 }
 
-/* Study guide subsection headings. */
 .guide-content h3 {
   color: #126d7a;
+  font-size: 19px;
+  margin: 18px 0 8px;
 }
 
-/* Add spacing between study tips. */
 .guide-content li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
+.note {
+  color: #65758a;
+  font-size: 13px;
+  margin-top: 18px;
+}
 
-/* ======================================== */
-/* CONTACT FORM */
-/* ======================================== */
+/* ========================================
+   YOUTUBE VIDEO
+   ======================================== */
 
-/* Arrange form fields in two columns. */
+.video-container {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  display: block;
+  width: 100%;
+  height: 310px;
+  border: 0;
+  border-radius: 10px;
+  background: #101820;
+}
+
+/* ========================================
+   CONTACT FORM
+   ======================================== */
+
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
 
-/* Space between individual form fields. */
 .field {
   margin-bottom: 18px;
 }
 
-/* Display field labels above their inputs. */
 .field label {
   display: block;
   font-weight: bold;
   margin-bottom: 6px;
 }
 
-/* Shared styling for form inputs. */
-.field input,
+.field input:not([type="checkbox"]),
 .field select,
 .field textarea {
+  display: block;
   width: 100%;
   padding: 11px;
   border: 1px solid #b9c9d3;
   border-radius: 7px;
-  font: inherit;
+  background: #ffffff;
+  color: #243247;
 }
 
-/* Highlight the active form field. */
+.field textarea {
+  resize: vertical;
+}
+
 .field input:focus,
 .field textarea:focus,
 .field select:focus {
@@ -496,12 +685,28 @@ tr:hover {
   outline: 2px solid #b7e6e8;
 }
 
+.field .checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-weight: normal;
+  cursor: pointer;
+}
 
-/* ======================================== */
-/* FOOTER */
-/* ======================================== */
+.field input[type="checkbox"] {
+  width: auto;
+  margin: 6px 0 0;
+  flex-shrink: 0;
+}
 
-/* Shared footer background and spacing. */
+.field .checkbox-label span {
+  flex: 1;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
 .site-footer {
   background: #243247;
   color: #ffffff;
@@ -509,205 +714,181 @@ tr:hover {
   margin-top: 30px;
 }
 
-/* Arrange footer content horizontally. */
 .footer-layout {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-/* Footer navigation links. */
 .footer-links {
   display: flex;
-  gap: 18px;
   flex-wrap: wrap;
+  gap: 18px;
 }
 
 .footer-links a {
   text-decoration: underline;
 }
 
+.footer-links a:hover {
+  color: #b7e6e8;
+}
 
-/* ======================================== */
-/* RESPONSIVE DESIGN - TABLETS */
-/* ======================================== */
+/* ========================================
+   TABLET RESPONSIVE DESIGN
+   ======================================== */
 
-/* Adjust layout for screens up to 900px wide. */
 @media (max-width: 900px) {
 
-  /* Display two cards per row. */
   .card-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  /* Stack hero content and information panels. */
   .hero-layout,
-  .info-layout {
+  .info-layout,
+  .compare-info {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 28px;
   }
 
-  /* Reduce hero heading size. */
   .hero h1 {
     font-size: 38px;
   }
 
-  /* Display two feature items per row. */
-  .feature-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .hero img {
+    height: 300px;
   }
 
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .places-carousel {
+    grid-auto-columns: calc((100% - 18px) / 2);
+    gap: 18px;
+  }
+
+  .places-carousel .card img {
+    height: 180px;
+  }
+
+  .video-container iframe {
+    height: 350px;
+  }
 }
 
+/* ========================================
+   MOBILE RESPONSIVE DESIGN
+   ======================================== */
 
-/* ======================================== */
-/* RESPONSIVE DESIGN - PHONES */
-/* ======================================== */
-
-/* Adjust layout for screens up to 600px wide. */
 @media (max-width: 600px) {
 
-  /* Stack the logo and navigation links. */
+  .container {
+    width: 92%;
+  }
+
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  /* Reduce spacing between navigation links. */
-  .nav-links {
     gap: 12px;
   }
 
-  /* Display cards and form fields in one column. */
+  .nav-links {
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .hero {
+    padding: 38px 0;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero img {
+    height: 230px;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+
   .card-grid,
   .form-grid,
   .feature-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Reduce hero section spacing. */
-  .hero {
-    padding: 40px 0;
+  .home-categories .card img,
+  .home-popular .card img {
+    height: 180px;
   }
 
-  /* Reduce hero heading size. */
-  .hero h1 {
-    font-size: 30px;
-  }
-
-  /* Reduce hero image height. */
-  .hero img {
-    height: 240px;
-  }
-
-  /* Reduce spacing between sections. */
-  .section {
+  .page-intro {
     padding: 30px 0;
   }
 
-  /* Reduce filter button spacing. */
-  .filter-controls {
-    gap: 8px;
+  .page-intro h1 {
+    font-size: 27px;
   }
 
-  /* Make filter buttons smaller. */
-  .filter-controls label {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-
-  /* Reduce padding inside information panels. */
-  .panel {
-    padding: 18px;
-  }
-
-  /* Reduce study guide padding. */
-  .guide-content {
-    padding: 16px;
-  }
-
-/* ======================================== */
-/* HORIZONTAL STUDY PLACE CAROUSEL */
-/* ======================================== */
-
-/* Display three cards and allow horizontal scrolling. */
-.places-carousel {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% - 44px) / 3);
-  gap: 22px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 12px 4px 24px;
-}
-
-/* Keep each card inside its own scrolling column. */
-.places-carousel .card {
-  min-width: 0;
-  scroll-snap-align: start;
-}
-
-/* Keep all carousel images at the same height. */
-.places-carousel .card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-}
-
-/* Keep the location button below the description. */
-.places-carousel .card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 340px;
-}
-
-/* Add space above the location button. */
-.places-carousel .button {
-  margin-top: auto;
-}
-
-/* Display scrolling instructions. */
-.carousel-hint {
-  color: #65758a;
-  font-size: 14px;
-  margin-top: 12px;
-}
-
-/* Display two cards on tablets. */
-@media (max-width: 900px) {
-  .places-carousel {
-    grid-auto-columns: calc((100% - 22px) / 2);
-  }
-}
-
-/* Display one card on mobile devices. */
-@media (max-width: 600px) {
   .places-carousel {
     grid-auto-columns: 88%;
     gap: 14px;
   }
 
-  .places-carousel .card-content {
-    min-height: 0;
+  .places-carousel .card img {
+    height: 175px;
   }
-}
 
-/* Keep confirmation checkbox beside its text. */
-.field input[type="checkbox"] {
-  width: auto;
-  margin-right: 8px;
-  vertical-align: middle;
-}
+  .comparison-area h3 {
+    font-size: 18px;
+  }
 
-/* Keep the confirmation label on one logical line. */
-.field label[for="confirmation"] {
-  display: block;
-  font-weight: normal;
-  cursor: pointer;
-}
+  .filter-controls {
+    gap: 8px;
+  }
 
+  .filter-controls label {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
 
+  .panel {
+    padding: 18px;
+  }
+
+  .guide-content {
+    padding: 16px;
+  }
+
+  th,
+  td {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .compare-info .panel h2 {
+    font-size: 24px;
+  }
+
+  .video-container iframe {
+    height: 220px;
+  }
+
+  .footer-layout {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

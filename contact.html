@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Shared site navigation. -->
+
+  <!-- Main navigation -->
   <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">StudySpot</a>
-      <nav class="nav-links" aria-label="Main navigation">
+
+      <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="places.html">Study Places</a>
         <a href="compare.html">Compare</a>
@@ -22,56 +24,71 @@
   </header>
 
   <main>
+
+    <!-- Page introduction -->
     <section class="page-intro">
       <div class="container">
         <h1>Suggest a Study Place</h1>
-        <p>Know a great study location? Fill in the example form below.</p>
+        <p>
+          Know a great study location?
+          Fill in the example form below.
+        </p>
       </div>
     </section>
 
+    <!-- Main form -->
     <section class="section">
       <div class="container info-layout">
-        <div class="panel">
-          <h2>Tell us about your place</h2>
 
-          <!-- This form demonstrates HTML validation; no server receives the data. -->
+        <div class="panel">
+          <h2>Tell Us About Your Place</h2>
+
           <form action="contact.html" method="get">
+
+            <!-- Personal information -->
             <div class="form-grid">
+
               <div class="field">
-                <label for="full-name">Your name</label>
+                <label for="full-name">Your Name</label>
                 <input
+                  type="text"
                   id="full-name"
                   name="full-name"
-                  type="text"
-                  required
+                  placeholder="Your full name"
                   minlength="2"
-                  placeholder="Your full name">
+                  required>
               </div>
 
               <div class="field">
                 <label for="email">Email</label>
                 <input
+                  type="email"
                   id="email"
                   name="email"
-                  type="email"
-                  required
-                  placeholder="name@example.com">
+                  placeholder="name@example.com"
+                  required>
               </div>
+
             </div>
 
+            <!-- Place name -->
             <div class="field">
-              <label for="place-name">Place name</label>
+              <label for="place-name">Place Name</label>
               <input
+                type="text"
                 id="place-name"
                 name="place-name"
-                type="text"
-                required
-                placeholder="Name of the study place">
+                placeholder="Name of the study place"
+                required>
             </div>
 
+            <!-- Place category -->
             <div class="field">
-              <label for="place-type">Place type</label>
-              <select id="place-type" name="place-type" required>
+              <label for="place-type">Place Type</label>
+              <select
+                id="place-type"
+                name="place-type"
+                required>
                 <option value="">Choose a type</option>
                 <option value="library">Library</option>
                 <option value="cafe">Cafe</option>
@@ -79,8 +96,34 @@
               </select>
             </div>
 
+            <!-- City and address -->
+            <div class="form-grid">
+
+              <div class="field">
+                <label for="city">City</label>
+                <input
+                  type="text"
+                  id="city"
+                  name="city"
+                  placeholder="Jerusalem"
+                  required>
+              </div>
+
+              <div class="field">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Street and building number"
+                  required>
+              </div>
+
+            </div>
+
+            <!-- Noise level -->
             <div class="field">
-              <label for="noise">Noise level</label>
+              <label for="noise">Noise Level</label>
               <select id="noise" name="noise">
                 <option value="low">Low</option>
                 <option value="medium">Medium</option>
@@ -88,203 +131,134 @@
               </select>
             </div>
 
+            <!-- Wi-Fi -->
             <div class="field">
-              <label for="description">Why do you recommend it?</label>
+              <label for="wifi">Wi-Fi Availability</label>
+              <select id="wifi" name="wifi">
+                <option value="yes">Available</option>
+                <option value="no">Not Available</option>
+                <option value="unknown">Not Sure</option>
+              </select>
+            </div>
+
+            <!-- Power outlets -->
+            <div class="field">
+              <label for="outlets">Power Outlets</label>
+              <select id="outlets" name="outlets">
+                <option value="many">Many</option>
+                <option value="some">Some</option>
+                <option value="limited">Limited</option>
+                <option value="unknown">Not Sure</option>
+              </select>
+            </div>
+
+            <!-- Description -->
+            <div class="field">
+              <label for="description">
+                Why Do You Recommend It?
+              </label>
               <textarea
                 id="description"
                 name="description"
                 rows="5"
-                required
                 minlength="10"
-                placeholder="Tell us what makes this place special"></textarea>
+                placeholder="Tell us what makes this place special"
+                required></textarea>
             </div>
 
+            <!-- Confirmation -->
             <div class="field">
-              <label>
-                <input type="checkbox" name="permission" required>
-                I understand that this is a demonstration form.
+              <label class="checkbox-label">
+                <input
+                  type="checkbox"
+                  name="confirmation"
+                  required>
+                <span>
+                  I understand that this is a demonstration form.
+                </span>
               </label>
             </div>
 
-            <button class="button" type="submit">Preview Form Submission</button>
+            <button class="button" type="submit">
+              Preview Form Submission
+            </button>
+
           </form>
 
-          <p>
-            <small>
-              Demo only: the form does not store or send recommendations to StudySpot.
-              Submitting reloads this page with the entered values in the URL.
-            </small>
+          <p class="note">
+            Demo only: this form does not store or send
+            recommendations to StudySpot. Submitting
+            reloads this page with the entered values
+            in the URL.
           </p>
         </div>
 
+        <!-- Helpful information -->
         <aside class="panel">
-          <h2>What should you look for?</h2>
-          <p>A helpful recommendation describes the environment, seating, internet access and noise level.</p>
-          <h3>Useful links</h3>
+          <h2>What Should You Look For?</h2>
+
+          <p>
+            A helpful recommendation describes
+            the environment, seating, internet
+            access and noise level.
+          </p>
+
+          <h3>Important Features</h3>
           <ul>
-            <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a></li>
-            <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
-            <li><a href="compare.html">Our comparison table</a></li>
+            <li>Comfortable seating</li>
+            <li>Reliable Wi-Fi</li>
+            <li>Power outlets</li>
+            <li>Good lighting</li>
+            <li>Suitable noise level</li>
+            <li>Convenient location</li>
           </ul>
+
+          <h3>Useful Links</h3>
+          <ul>
+            <li>
+              <a href="https://www.openstreetmap.org/"
+                 target="_blank">
+                OpenStreetMap
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com/maps"
+                 target="_blank">
+                Google Maps
+              </a>
+            </li>
+            <li>
+              <a href="compare.html">
+                Our Comparison Table
+              </a>
+            </li>
+          </ul>
+
+          <p>
+            <a class="button" href="places.html">
+              Explore Study Places
+            </a>
+          </p>
         </aside>
+
       </div>
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-layout">
-      <span>StudySpot © 2026 | Student project</span>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="places.html">Study Places</a>
-        <a href="compare.html">Compare</a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+      <span>StudySpot © 2026 | Student Project</span>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StudySpot | Suggest a Place</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <!-- Shared site navigation. -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="logo" href="index.html">StudySpot</a>
-      <nav class="nav-links" aria-label="Main navigation">
+      <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="places.html">Study Places</a>
         <a href="compare.html">Compare</a>
         <a href="contact.html">Suggest a Place</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section class="page-intro">
-      <div class="container">
-        <h1>Suggest a Study Place</h1>
-        <p>Know a great study location? Fill in the example form below.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container info-layout">
-        <div class="panel">
-          <h2>Tell us about your place</h2>
-
-          <!-- This form demonstrates HTML validation; no server receives the data. -->
-          <form action="contact.html" method="get">
-            <div class="form-grid">
-              <div class="field">
-                <label for="full-name">Your name</label>
-                <input
-                  id="full-name"
-                  name="full-name"
-                  type="text"
-                  required
-                  minlength="2"
-                  placeholder="Your full name">
-              </div>
-
-              <div class="field">
-                <label for="email">Email</label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="name@example.com">
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="place-name">Place name</label>
-              <input
-                id="place-name"
-                name="place-name"
-                type="text"
-                required
-                placeholder="Name of the study place">
-            </div>
-
-            <div class="field">
-              <label for="place-type">Place type</label>
-              <select id="place-type" name="place-type" required>
-                <option value="">Choose a type</option>
-                <option value="library">Library</option>
-                <option value="cafe">Cafe</option>
-                <option value="workspace">Workspace</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="noise">Noise level</label>
-              <select id="noise" name="noise">
-                <option value="low">Low</option>
-                <option value="medium">Medium</option>
-                <option value="high">High</option>
-              </select>
-            </div>
-
-            <div class="field">
-              <label for="description">Why do you recommend it?</label>
-              <textarea
-                id="description"
-                name="description"
-                rows="5"
-                required
-                minlength="10"
-                placeholder="Tell us what makes this place special"></textarea>
-            </div>
-
-            <div class="field">
-              <label>
-                <input type="checkbox" name="permission" required>
-                I understand that this is a demonstration form.
-              </label>
-            </div>
-
-            <button class="button" type="submit">Preview Form Submission</button>
-          </form>
-
-          <p>
-            <small>
-              Demo only: the form does not store or send recommendations to StudySpot.
-              Submitting reloads this page with the entered values in the URL.
-            </small>
-          </p>
-        </div>
-
-        <aside class="panel">
-          <h2>What should you look for?</h2>
-          <p>A helpful recommendation describes the environment, seating, internet access and noise level.</p>
-          <h3>Useful links</h3>
-          <ul>
-            <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer">OpenStreetMap</a></li>
-            <li><a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps</a></li>
-            <li><a href="compare.html">Our comparison table</a></li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-layout">
-      <span>StudySpot © 2026 | Student project</span>
-      <div class="footer-links">
-        <a href="index.html">Home</a>
-        <a href="places.html">Study Places</a>
-        <a href="compare.html">Compare</a>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
