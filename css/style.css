@@ -517,7 +517,6 @@ tbody tr:hover {
    CSS ONLY FILTERS
    ======================================== */
 
-/* Hide radio buttons visually */
 .comparison-area > input[type="radio"] {
   position: absolute;
   opacity: 0;
@@ -525,7 +524,6 @@ tbody tr:hover {
   height: 1px;
 }
 
-/* Filter labels */
 .filter-controls {
   display: flex;
   flex-wrap: wrap;
@@ -547,7 +545,6 @@ tbody tr:hover {
   background: #dff4f3;
 }
 
-/* Selected place type */
 #filter-all:checked ~ .filter-controls label[for="filter-all"],
 #filter-library:checked ~ .filter-controls label[for="filter-library"],
 #filter-cafe:checked ~ .filter-controls label[for="filter-cafe"],
@@ -557,7 +554,6 @@ tbody tr:hover {
   border-color: #126d7a;
 }
 
-/* Selected region */
 #region-all:checked ~ .filter-controls label[for="region-all"],
 #region-jerusalem:checked ~ .filter-controls label[for="region-jerusalem"],
 #region-center:checked ~ .filter-controls label[for="region-center"],
@@ -568,7 +564,6 @@ tbody tr:hover {
   border-color: #126d7a;
 }
 
-/* Filter by place type */
 #filter-library:checked ~ .table-wrap tbody tr:not(.library-row) {
   display: none;
 }
@@ -581,7 +576,6 @@ tbody tr:hover {
   display: none;
 }
 
-/* Filter by region */
 #region-jerusalem:checked ~ .table-wrap tbody tr:not(.jerusalem-row) {
   display: none;
 }
@@ -892,3 +886,422 @@ tbody tr:hover {
     align-items: flex-start;
   }
 }
+
+/* ========================================
+   FAQ PAGE - NEW DESIGN
+   These styles affect only faq.html
+   ======================================== */
+
+
+/* FAQ hero */
+
+.faq-page .faq-hero {
+  padding: 72px 0 65px;
+  text-align: center;
+  background: #e1f3f3;
+}
+
+.faq-page .faq-label {
+  display: inline-block;
+  padding: 8px 18px;
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #b7dfe1;
+  border-radius: 25px;
+  color: #126d7a;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.faq-page .faq-hero h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  margin: 0 0 18px;
+  color: #20364a;
+}
+
+.faq-page .faq-hero-description {
+  max-width: 720px;
+  margin: 0 auto 25px;
+  color: #536579;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Hero information */
+
+.faq-hero-info {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.faq-hero-info span {
+  padding: 7px 15px;
+  border-radius: 25px;
+  background: #d0ebea;
+  color: #126d7a;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* FAQ category navigation */
+
+.faq-page .faq-category-links {
+  justify-content: center;
+  gap: 13px;
+}
+
+.faq-page .faq-category-links a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #ffffff;
+  border: 1px solid #b9dfe1;
+  border-radius: 25px;
+  color: #126d7a;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 3px 9px #d0e6e8;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.faq-page .faq-category-links a:hover {
+  background: #126d7a;
+  color: #ffffff;
+  text-decoration: none;
+  transform: translateY(-3px);
+}
+
+/* FAQ sections */
+
+.faq-page .faq-section {
+  padding: 60px 0;
+}
+
+.faq-page .faq-heading {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.faq-page .faq-section-number {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #126d7a;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.faq-page .faq-heading h2 {
+  font-size: 32px;
+  color: #243247;
+  margin: 0 0 12px;
+}
+
+.faq-page .faq-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #65758a;
+  font-size: 16px;
+}
+
+/* FAQ cards */
+
+.faq-page .faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.faq-page .faq-item {
+  min-width: 0;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid #dce8ee;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px #e1e8ef;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.faq-page .faq-item:hover {
+  transform: translateY(-4px);
+  border-color: #8ccbd0;
+  box-shadow: 0 10px 25px #d6e4e9;
+}
+
+.faq-page .faq-card-label {
+  display: inline-block;
+  padding: 5px 11px;
+  margin-bottom: 17px;
+  background: #e4f5f3;
+  color: #126d7a;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 0.8px;
+}
+
+.faq-page .faq-item h3 {
+  margin: 0 0 14px;
+  color: #20364a;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.faq-page .faq-item p {
+  margin: 0;
+  color: #536579;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   FAQ - DISTINCT SECTION COLORS
+   ======================================== */
+
+/* 01 - General Questions */
+
+.faq-page #general {
+  background: #f5f8fc;
+}
+
+/* 02 - About StudySpot */
+
+.faq-page #website-faq {
+  background: #dceff1;
+}
+
+/* 03 - Libraries */
+
+.faq-page #libraries-faq {
+  background: #e5f0fa;
+}
+
+.faq-page .faq-libraries .faq-card-label {
+  background: #e5f1fb;
+  color: #286b96;
+}
+
+/* 04 - Cafes */
+
+.faq-page #cafes-faq {
+  background: #f1f5f9;
+}
+
+.faq-page .faq-cafes .faq-card-label {
+  background: #dceef2;
+  color: #126d7a;
+}
+
+/* 05 - Workspaces */
+
+.faq-page #workspaces-faq {
+  background: #e2f2ec;
+}
+
+.faq-page .faq-workspaces .faq-card-label {
+  background: #e0f2e7;
+  color: #347351;
+}
+
+/* Section buttons */
+
+.faq-page .faq-section-link {
+  margin: 30px 0 0;
+  text-align: center;
+}
+
+.faq-page .faq-section-link .button {
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* ========================================
+   FAQ CLOSING SECTION
+   ======================================== */
+
+.faq-page .faq-closing {
+  padding: 65px 0;
+  background: #126d7a;
+  color: #ffffff;
+  text-align: center;
+}
+
+.faq-page .faq-closing-content {
+  max-width: 900px;
+}
+
+.faq-page .faq-closing-label {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: #c5ebec;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.faq-page .faq-closing h2 {
+  margin: 0 0 17px;
+  font-size: 34px;
+  color: #ffffff;
+}
+
+.faq-page .faq-closing p {
+  max-width: 650px;
+  margin: 0 auto 27px;
+  color: #e1f3f4;
+  font-size: 17px;
+}
+
+.faq-page .faq-closing-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.faq-page .faq-light-button {
+  background: #ffffff;
+  color: #126d7a;
+  border: 1px solid #ffffff;
+}
+
+.faq-page .faq-light-button:hover {
+  background: #dff4f3;
+  color: #0b4c55;
+}
+
+.faq-page .faq-outline-button {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.faq-page .faq-outline-button:hover {
+  background: #ffffff;
+  color: #126d7a;
+}
+
+/* Footer spacing on FAQ page */
+
+.faq-page .site-footer {
+  margin-top: 0;
+}
+
+/* ========================================
+   FAQ RESPONSIVE - TABLET
+   ======================================== */
+
+@media (max-width: 900px) {
+
+  .faq-page .faq-hero h1 {
+    font-size: 38px;
+  }
+
+  .faq-page .faq-item {
+    padding: 23px;
+  }
+
+  .faq-page .faq-item h3 {
+    font-size: 18px;
+  }
+
+  .faq-page .faq-category-links {
+    gap: 10px;
+  }
+
+  .faq-page .faq-category-links a {
+    padding: 10px 16px;
+  }
+}
+
+/* ========================================
+   FAQ RESPONSIVE - MOBILE
+   ======================================== */
+
+@media (max-width: 700px) {
+
+  .faq-page .faq-hero {
+    padding: 42px 0;
+  }
+
+  .faq-page .faq-hero h1 {
+    font-size: 31px;
+  }
+
+  .faq-page .faq-hero-description {
+    font-size: 16px;
+  }
+
+  .faq-page .faq-hero-info {
+    gap: 8px;
+    margin-bottom: 25px;
+  }
+
+  .faq-page .faq-hero-info span {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .faq-page .faq-category-links a {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .faq-page .faq-section {
+    padding: 38px 0;
+  }
+
+  .faq-page .faq-heading h2 {
+    font-size: 26px;
+  }
+
+  .faq-page .faq-heading p {
+    font-size: 14px;
+  }
+
+  .faq-page .faq-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .faq-page .faq-item {
+    padding: 21px;
+  }
+
+  .faq-page .faq-item h3 {
+    font-size: 18px;
+  }
+
+  .faq-page .faq-item p {
+    font-size: 14px;
+  }
+
+  .faq-page .faq-closing {
+    padding: 42px 0;
+  }
+
+  .faq-page .faq-closing h2 {
+    font-size: 27px;
+  }
+
+  .faq-page .faq-closing p {
+    font-size: 15px;
+  }
+}
+
+/* ========================================
+   ACTIVE NAVIGATION LINK
+   ======================================== */
+
+.nav-links a.active {
+  color: #126d7a;
+  font-weight: bold;
+  border-bottom: 2px solid #126d7a;
+  padding-bottom: 5px;
+}
+
