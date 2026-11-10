@@ -7,7 +7,8 @@
   <title>StudySpot | Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body class="home-page">
 
   <!-- Main navigation -->
   <header class="site-header">
@@ -15,7 +16,7 @@
       <a class="logo" href="index.html">StudySpot</a>
 
       <nav class="nav-links">
-        <a href="index.html" class="active">Home</a>
+        <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="places.html">Study Places</a>
         <a href="compare.html">Compare</a>
         <a href="faq.html">FAQ</a>
@@ -26,80 +27,161 @@
 
   <main>
 
-    <!-- Hero section -->
-    <section class="hero">
+    <!-- 01 - Hero section -->
+    <section class="hero home-hero">
       <div class="container hero-layout">
-        <div>
-          <span class="tag">Your Study Space Guide</span>
+
+        <div class="home-hero-content">
+          <span class="home-eyebrow">
+            YOUR STUDY SPACE GUIDE
+          </span>
+
           <h1>Find Your Perfect Place to Focus</h1>
+
           <p>
-            Discover libraries, cafes and workspaces across Israel.
-            Find a comfortable environment for studying,
-            reading and working on projects.
+            Your next productive study session starts with
+            the right environment. Discover libraries,
+            cafes and workspaces across Israel and find
+            a place that fits your study style.
           </p>
-          <a class="button" href="places.html">
-            Explore Study Places
-          </a>
+
+          <div class="home-hero-buttons">
+            <a class="button" href="places.html">
+              Explore Study Places
+            </a>
+
+            <a class="button home-secondary-button"
+               href="compare.html">
+              Compare Places
+            </a>
+          </div>
+
+          <div class="home-hero-tags">
+            <span>Libraries</span>
+            <span>Cafes</span>
+            <span>Workspaces</span>
+          </div>
         </div>
 
-        <img
-          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000"
-          alt="Bright modern study workspace">
+        <div class="home-hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1000"
+            alt="Bright modern study workspace">
+
+          <div class="home-image-caption">
+            A better space. A better study session.
+          </div>
+        </div>
+
       </div>
     </section>
 
-    <!-- Study place categories -->
+
+    <!-- 02 - Study place categories -->
     <section class="section home-categories">
       <div class="container">
-        <div class="section-heading">
+
+        <div class="home-section-heading">
+          <span class="home-section-label">
+            FIND YOUR ENVIRONMENT
+          </span>
+
           <h2>Choose Your Study Style</h2>
-          <p>Find the environment that suits your learning needs.</p>
+
+          <p>
+            Everyone studies differently. Explore the
+            environment that works best for you.
+          </p>
         </div>
 
-        <div class="card-grid">
+        <div class="card-grid home-category-grid">
 
-          <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800"
-              alt="Library bookshelves">
+          <!-- Libraries -->
+          <article class="card home-category-card">
+            <div class="home-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800"
+                alt="Library bookshelves">
+
+              <span class="home-image-number">01</span>
+            </div>
 
             <div class="card-content">
+              <span class="home-card-label">
+                QUIET &amp; FOCUSED
+              </span>
+
               <h3>Libraries</h3>
+
               <p>
-                Quiet spaces for concentration,
-                reading and exam preparation.
+                A peaceful environment for reading,
+                deep concentration and exam preparation.
               </p>
-              <a href="places.html#libraries">See Libraries</a>
+
+              <a class="home-card-link"
+                 href="places.html#libraries">
+                Explore Libraries &rarr;
+              </a>
             </div>
           </article>
 
-          <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800"
-              alt="Comfortable cafe interior">
+          <!-- Cafes -->
+          <article class="card home-category-card">
+            <div class="home-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800"
+                alt="Comfortable cafe interior">
+
+              <span class="home-image-number">02</span>
+            </div>
 
             <div class="card-content">
+              <span class="home-card-label">
+                COZY &amp; CREATIVE
+              </span>
+
               <h3>Cafes</h3>
+
               <p>
-                Enjoy a warm drink while you read,
-                write or plan your next project.
+                Enjoy a relaxed atmosphere while
+                studying, writing or planning your
+                next project.
               </p>
-              <a href="places.html#cafes">See Cafes</a>
+
+              <a class="home-card-link"
+                 href="places.html#cafes">
+                Explore Cafes &rarr;
+              </a>
             </div>
           </article>
 
-          <article class="card">
-            <img
-              src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800"
-              alt="Modern shared workspace">
+          <!-- Workspaces -->
+          <article class="card home-category-card">
+            <div class="home-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800"
+                alt="Modern shared workspace">
+
+              <span class="home-image-number">03</span>
+            </div>
 
             <div class="card-content">
+              <span class="home-card-label">
+                PRODUCTIVE &amp; SOCIAL
+              </span>
+
               <h3>Workspaces</h3>
+
               <p>
-                Comfortable desks and a productive
-                atmosphere for teamwork.
+                Comfortable desks and collaborative
+                spaces for teamwork, meetings and
+                group assignments.
               </p>
-              <a href="places.html#workspaces">See Workspaces</a>
+
+              <a class="home-card-link"
+                 href="places.html#workspaces">
+                Explore Workspaces &rarr;
+              </a>
             </div>
           </article>
 
@@ -107,123 +189,367 @@
       </div>
     </section>
 
-    <!-- Website features -->
-    <section class="feature-strip">
-      <div class="container feature-grid">
 
-        <div class="feature-item">
-          <h3>20 Study Spots</h3>
-          <p>Discover study environments across Israel.</p>
+    <!-- 03 - StudySpot at a glance -->
+    <section class="section home-overview">
+      <div class="container">
+
+        <div class="home-section-heading">
+          <span class="home-section-label">
+            STUDYSPOT AT A GLANCE
+          </span>
+
+          <h2>One Website. More Ways to Study.</h2>
+
+          <p>
+            Discover different study environments
+            and compare your options in one place.
+          </p>
         </div>
 
-        <div class="feature-item">
-          <h3>Easy Comparison</h3>
-          <p>Compare locations and useful information.</p>
-        </div>
+        <div class="home-stats-grid">
 
-        <div class="feature-item">
-          <h3>Find Your Focus</h3>
-          <p>Choose a place that matches your study needs.</p>
-        </div>
+          <div class="home-stat-card">
+            <span class="home-stat-number">20</span>
 
+            <h3>Study Spots</h3>
+
+            <p>
+              Explore our collection of study
+              locations across Israel.
+            </p>
+          </div>
+
+          <div class="home-stat-card">
+            <span class="home-stat-number">3</span>
+
+            <h3>Study Categories</h3>
+
+            <p>
+              Libraries, cafes and workspaces
+              for different learning styles.
+            </p>
+          </div>
+
+          <div class="home-stat-card home-stat-comparison">
+            <div class="home-stat-icon">
+              &#9878;
+            </div>
+
+            <h3>Easy Comparison</h3>
+
+            <p>
+              Review locations and useful
+              information before choosing
+              where to study.
+            </p>
+          </div>
+
+        </div>
       </div>
     </section>
 
-    <!-- Popular study environments -->
+
+    <!-- 04 - Popular study environments -->
     <section class="section highlight-section home-popular">
       <div class="container">
-        <div class="section-heading">
+
+        <div class="home-section-heading">
+          <span class="home-section-label">
+            FEATURED LOCATIONS
+          </span>
+
           <h2>Popular Study Environments</h2>
-          <p>Explore some of our featured study locations.</p>
+
+          <p>
+            Not sure where to begin?
+            Take a look at some of our featured places.
+          </p>
         </div>
 
-        <div class="card-grid">
+        <div class="card-grid home-featured-grid">
 
-          <article class="card">
+          <!-- National Library -->
+          <article class="card home-featured-card">
             <img
               src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800"
               alt="Library reading area">
 
             <div class="card-content">
-              <span class="tag">Research</span>
+              <span class="tag">Library</span>
+
               <h3>National Library of Israel</h3>
-              <p>
-                A major library in Jerusalem with
-                reading and research facilities.
+
+              <p class="home-place-location">
+                Jerusalem, Israel
               </p>
-              <a href="places.html#libraries">Explore Libraries</a>
+
+              <p>
+                A major library with reading
+                and research facilities.
+              </p>
+
+              <div class="home-place-detail">
+                <strong>Best for:</strong>
+                Research &amp; focused study
+              </div>
+
+              <a class="home-card-link"
+                 href="places.html#libraries">
+                Explore Libraries &rarr;
+              </a>
             </div>
           </article>
 
-          <article class="card">
+          <!-- Cafe Landwer -->
+          <article class="card home-featured-card">
             <img
               src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800"
-              alt="Coffee on a table">
+              alt="Coffee preparation in a cafe">
 
             <div class="card-content">
-              <span class="tag">Relaxed Atmosphere</span>
+              <span class="tag">Cafe</span>
+
               <h3>Cafe Landwer</h3>
-              <p>
-                A cafe chain with branches
-                in cities across Israel.
+
+              <p class="home-place-location">
+                Multiple locations, Israel
               </p>
-              <a href="places.html#cafes">Explore Cafes</a>
+
+              <p>
+                A cafe chain offering a relaxed
+                atmosphere in various cities.
+              </p>
+
+              <div class="home-place-detail">
+                <strong>Best for:</strong>
+                Casual reading &amp; planning
+              </div>
+
+              <a class="home-card-link"
+                 href="places.html#cafes">
+                Explore Cafes &rarr;
+              </a>
             </div>
           </article>
 
-          <article class="card">
+          <!-- Mindspace -->
+          <article class="card home-featured-card">
             <img
               src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=800"
               alt="Collaborative office space">
 
             <div class="card-content">
-              <span class="tag">Teamwork</span>
+              <span class="tag">Workspace</span>
+
               <h3>Mindspace</h3>
-              <p>
-                Shared workspaces for
-                productive collaboration.
+
+              <p class="home-place-location">
+                Multiple locations, Israel
               </p>
-              <a href="places.html#workspaces">Explore Workspaces</a>
+
+              <p>
+                Shared working environments
+                designed for productivity
+                and collaboration.
+              </p>
+
+              <div class="home-place-detail">
+                <strong>Best for:</strong>
+                Teamwork &amp; projects
+              </div>
+
+              <a class="home-card-link"
+                 href="places.html#workspaces">
+                Explore Workspaces &rarr;
+              </a>
             </div>
           </article>
 
         </div>
+
+        <div class="home-section-action">
+          <a class="button" href="places.html">
+            View All Study Places
+          </a>
+        </div>
+
       </div>
     </section>
 
-    <!-- How the website works -->
-    <section class="section">
-      <div class="container info-layout">
 
-        <div class="panel">
+    <!-- 05 - How StudySpot works -->
+    <section class="section home-how">
+      <div class="container">
+
+        <div class="home-section-heading">
+          <span class="home-section-label">
+            SIMPLE &amp; EASY
+          </span>
+
           <h2>How StudySpot Works</h2>
-          <ol>
-            <li>Explore different types of study places.</li>
-            <li>Compare locations and important information.</li>
-            <li>Choose the place that suits your study style.</li>
-          </ol>
-          <a class="button" href="compare.html">Compare Places</a>
+
+          <p>
+            Three simple steps to find
+            your next study environment.
+          </p>
         </div>
 
-        <aside class="panel">
-          <h2>Study Tip</h2>
-          <p>
-            Choose a quiet environment for tasks that require
-            deep concentration. For group projects, look for
-            a space where conversation is welcome.
-          </p>
-          <a href="contact.html">Suggest a New Place</a>
+        <div class="home-steps-grid">
+
+          <article class="home-step-card">
+            <span class="home-step-number">01</span>
+
+            <div class="home-step-symbol">
+              &#128269;
+            </div>
+
+            <h3>Explore</h3>
+
+            <p>
+              Browse libraries, cafes and
+              workspaces across Israel.
+            </p>
+          </article>
+
+          <article class="home-step-card">
+            <span class="home-step-number">02</span>
+
+            <div class="home-step-symbol">
+              &#9878;
+            </div>
+
+            <h3>Compare</h3>
+
+            <p>
+              Compare locations, categories
+              and useful study information.
+            </p>
+          </article>
+
+          <article class="home-step-card">
+            <span class="home-step-number">03</span>
+
+            <div class="home-step-symbol">
+              &#10003;
+            </div>
+
+            <h3>Choose</h3>
+
+            <p>
+              Pick the environment that
+              suits your learning needs.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="home-section-action">
+          <a class="button" href="compare.html">
+            Start Comparing
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 06 - Compact FAQ and study tip -->
+    <section class="section home-help">
+      <div class="container home-help-grid">
+
+        <article class="home-help-card">
+          <div class="home-help-icon">
+            ?
+          </div>
+
+          <div class="home-help-text">
+            <span class="home-section-label">
+              NEED SOME GUIDANCE?
+            </span>
+
+            <h2>Need Help Choosing?</h2>
+
+            <p>
+              Find quick answers about libraries,
+              cafes, workspaces and how StudySpot works.
+            </p>
+
+            <a class="home-card-link"
+               href="faq.html">
+              Visit Our FAQ &rarr;
+            </a>
+          </div>
+        </article>
+
+        <aside class="home-tip-card">
+          <div class="home-tip-icon">
+            &#10003;
+          </div>
+
+          <div class="home-help-text">
+            <span class="home-section-label">
+              STUDY TIP
+            </span>
+
+            <h2>Study Smarter</h2>
+
+            <p>
+              Choose quiet spaces for deep focus
+              and collaborative spaces for
+              group assignments.
+            </p>
+
+            <a class="home-card-link"
+               href="places.html">
+              Find Your Study Space &rarr;
+            </a>
+          </div>
         </aside>
 
       </div>
     </section>
 
+
+    
+<!-- Final section - Suggest a Study Place -->
+<section class="home-closing">
+  <div class="container home-closing-content">
+
+    <span class="home-closing-label">
+      HELP US GROW
+    </span>
+
+    <h2>
+      Know a Great Place to Study?
+    </h2>
+
+    <p>
+      Help other students discover new study spots
+      across Israel. Share your favorite library,
+      cafe or workspace with our community.
+    </p>
+
+    <div class="home-closing-buttons">
+      <a class="button home-light-button" href="contact.html">
+        Suggest a Place
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
   </main>
+
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-layout">
-      <span>StudySpot © 2026 | Student Project</span>
+
+      <span>
+        StudySpot &copy; 2026 | Student Project
+      </span>
 
       <div class="footer-links">
         <a href="index.html">Home</a>
@@ -232,6 +558,7 @@
         <a href="faq.html">FAQ</a>
         <a href="contact.html">Suggest a Place</a>
       </div>
+
     </div>
   </footer>
 
