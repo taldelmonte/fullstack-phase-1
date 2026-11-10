@@ -365,7 +365,7 @@ textarea {
   font-size: 14px;
   font-weight: bold;
   text-align: center;
-  transition: background 0.2s, transform 0.2s;
+  transition: background  0.2s, transform 0.2s;
 }
 
 .places-page .category-links a:hover,
@@ -643,12 +643,6 @@ textarea {
    INFORMATION PANELS
    ========================================= */
 
-.info-layout {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 28px;
-  align-items: start;
-}
 
 .panel {
   min-width: 0;
@@ -670,114 +664,145 @@ textarea {
   text-decoration: underline;
 }
 
+
 /* =========================================
    COMPARISON PAGE
    ========================================= */
 
-.compare-info {
-  grid-template-columns: 1fr 1fr;
+/* INTRO */
+
+.compare-page .compare-intro {
+  background: #e5f3f1;
+  padding: 60px 0 55px;
+  text-align: center;
 }
 
-.compare-info .panel {
-  font-size: 16px;
+.compare-page .compare-eyebrow {
+  display: inline-block;
+  color: #126d7a;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
 }
 
-.compare-info .panel h2 {
-  font-size: 27px;
+.compare-page .compare-intro h1 {
+  font-size: 42px;
+  margin: 12px 0;
+  color: #20364a;
 }
 
-.compare-info .panel h3 {
-  font-size: 20px;
+.compare-page .compare-intro p {
+  color: #536579;
+  font-size: 17px;
+  margin: 0 auto 22px;
+  max-width: 700px;
 }
 
-.comparison-area {
-  width: 100%;
-  font-size: 16px;
+.compare-page .compare-intro-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
-.comparison-area h3 {
-  font-size: 20px;
-  margin: 24px 0 12px;
-}
-
-.table-wrap {
-  width: 100%;
-  overflow-x: auto;
+.compare-page .compare-intro-stats span {
   background: #fff;
-  border-radius: 12px;
-}
-
-table {
-  width: 100%;
-  min-width: 650px;
-  border-collapse: collapse;
-}
-
-th,
-td {
-  text-align: left;
-  padding: 17px 18px;
-  font-size: 16px;
-  line-height: 1.6;
-  border-bottom: 1px solid #dbe4eb;
-}
-
-th {
-  background: #dff4f3;
+  color: #126d7a;
+  border: 1px solid #c3dfe3;
+  border-radius: 25px;
+  padding: 7px 16px;
+  font-size: 13px;
   font-weight: bold;
 }
 
-tbody tr:hover {
-  background: #f1f9fa;
+/* TABLE SECTION */
+
+.compare-page .compare-table-section {
+  background: #f3f8f8;
+  padding: 55px 0 65px;
 }
 
-/* CSS-ONLY TABLE FILTERS */
+.compare-page .compare-table-section h2 {
+  color: #20364a;
+}
 
-.comparison-area > input[type="radio"] {
+.compare-page .comparison-area {
+  width: 100%;
+  font-size: 16px;
+}
+
+/* HIDE FILTER RADIO BUTTONS */
+
+.compare-page .comparison-area > input[type="radio"] {
   position: absolute;
   opacity: 0;
   width: 1px;
   height: 1px;
 }
 
-.filter-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
+/* FILTER PANEL */
+
+.compare-page .compare-filter-panel {
+  background: #fff;
+  padding: 25px 28px 10px;
+  border: 1px solid #dce8ee;
+  border-radius: 16px;
+  margin-bottom: 22px;
 }
 
-.filter-controls label {
+.compare-page .compare-filter-panel h3 {
+  color: #20364a;
+  margin: 5px 0 12px;
+  font-size: 17px;
+}
+
+.compare-page .filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.compare-page .filter-controls label {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 9px 17px;
   background: #fff;
   border: 1px solid #b9c9d3;
   border-radius: 25px;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
 }
 
-.filter-controls label:hover {
+.compare-page .filter-controls label:hover {
   background: #dff4f3;
 }
 
-#filter-all:checked ~ .filter-controls label[for="filter-all"],
-#filter-library:checked ~ .filter-controls label[for="filter-library"],
-#filter-cafe:checked ~ .filter-controls label[for="filter-cafe"],
-#filter-workspace:checked ~ .filter-controls label[for="filter-workspace"],
-#region-all:checked ~ .filter-controls label[for="region-all"],
-#region-jerusalem:checked ~ .filter-controls label[for="region-jerusalem"],
-#region-center:checked ~ .filter-controls label[for="region-center"],
-#region-north:checked ~ .filter-controls label[for="region-north"],
-#region-south:checked ~ .filter-controls label[for="region-south"] {
+/* SELECTED FILTER BUTTONS */
+
+#filter-all:checked ~ .compare-filter-panel label[for="filter-all"],
+#filter-library:checked ~ .compare-filter-panel label[for="filter-library"],
+#filter-cafe:checked ~ .compare-filter-panel label[for="filter-cafe"],
+#filter-workspace:checked ~ .compare-filter-panel label[for="filter-workspace"],
+#region-all:checked ~ .compare-filter-panel label[for="region-all"],
+#region-jerusalem:checked ~ .compare-filter-panel label[for="region-jerusalem"],
+#region-center:checked ~ .compare-filter-panel label[for="region-center"],
+#region-north:checked ~ .compare-filter-panel label[for="region-north"],
+#region-south:checked ~ .compare-filter-panel label[for="region-south"] {
   background: #126d7a;
   color: #fff;
   border-color: #126d7a;
 }
 
+/* FILTER TABLE ROWS BY TYPE */
+
 #filter-library:checked ~ .table-wrap tbody tr:not(.library-row),
 #filter-cafe:checked ~ .table-wrap tbody tr:not(.cafe-row),
-#filter-workspace:checked ~ .table-wrap tbody tr:not(.workspace-row),
+#filter-workspace:checked ~ .table-wrap tbody tr:not(.workspace-row) {
+  display: none;
+}
+
+/* FILTER TABLE ROWS BY REGION */
+
 #region-jerusalem:checked ~ .table-wrap tbody tr:not(.jerusalem-row),
 #region-center:checked ~ .table-wrap tbody tr:not(.center-row),
 #region-north:checked ~ .table-wrap tbody tr:not(.north-row),
@@ -785,112 +810,320 @@ tbody tr:hover {
   display: none;
 }
 
-/* STUDY GUIDE AND VIDEO */
+/* RESULTS TEXT */
 
-.guide-content {
-  background: #f5f8fc;
-  padding: 24px;
+.compare-page .compare-results-label {
+  color: #65758a;
+  font-size: 14px;
+  margin: 0 0 15px;
+}
+
+/* COMPARISON TABLE */
+
+.compare-page .table-wrap {
+  width: 100%;
+  max-height: 750px;
+  overflow-x: auto;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #dce8ee;
+  border-radius: 15px;
+}
+
+.compare-page .table-wrap th {
+  position: sticky;
+  top: 0;
+  background: #dff4f3;
+  z-index: 1;
+}
+
+.compare-page table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.compare-page th,
+.compare-page td {
+  text-align: left;
+  padding: 15px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  border-bottom: 1px solid #dbe4eb;
+}
+
+.compare-page th {
+  background: #dff4f3;
+  color: #20364a;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.compare-page tbody tr:hover {
+  background: #f1f9fa;
+}
+
+.compare-page .compare-place-name {
+  font-weight: bold;
+  color: #20364a;
+}
+
+/* PLACE TYPE LABELS */
+
+.compare-page .compare-type {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 11px;
+  font-size: 12px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.compare-page .compare-type-library {
+  background: #e5f1fb;
+  color: #286b96;
+}
+
+.compare-page .compare-type-cafe {
+  background: #fff1db;
+  color: #875b1c;
+}
+
+.compare-page .compare-type-workspace {
+  background: #e0f2e7;
+  color: #347351;
+}
+
+/* GOOGLE MAPS LINKS */
+
+.compare-page .compare-map-link {
+  color: #126d7a;
+  font-weight: bold;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+.compare-page .compare-map-link:hover {
+  color: #0b4c55;
+}
+
+/* STUDY GUIDE AND VIDEO SECTION */
+
+.compare-page .compare-learning-section {
+  background: #fff;
+  padding: 60px 0;
+}
+
+.compare-page .compare-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.compare-page .compare-info .panel {
+  padding: 28px;
+  border-radius: 16px;
+  font-size: 16px;
+}
+
+.compare-page .compare-info .panel h2 {
+  font-size: 25px;
+  color: #20364a;
+}
+
+.compare-page .compare-muted {
+  color: #65758a;
+  font-size: 15px;
+}
+
+/* STUDY GUIDE STEPS */
+
+.compare-page .compare-guide-grid {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.compare-page .compare-guide-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 17px;
+  background: #f5f9fb;
+  border: 1px solid #e2eaf0;
   border-radius: 12px;
 }
 
-.guide-content h3 {
+.compare-page .compare-step-number {
+  font-size: 22px;
   color: #126d7a;
-  font-size: 19px;
-  margin: 18px 0 8px;
+  font-weight: bold;
 }
 
-.guide-content li {
-  margin-bottom: 8px;
+.compare-page .compare-guide-step h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #20364a;
 }
 
-.note {
+.compare-page .compare-guide-step p {
+  margin: 0;
+  color: #536579;
+  font-size: 14px;
+}
+
+.compare-page .compare-guide-button {
+  margin-top: 3px;
+}
+
+
+/* STUDY CHECKLIST IMAGE */
+
+.compare-page .compare-checklist-image {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.compare-page .compare-checklist-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+
+
+/* VIDEO ALTERNATIVE */
+
+.compare-page .compare-video-fallback {
+  margin: 22px 0;
+  padding: 24px;
+  background: #e5f3f1;
+  border: 1px solid #cde5e6;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.compare-page .compare-video-fallback h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  color: #20364a;
+}
+
+.compare-page .compare-video-fallback p {
+  margin: 0 auto 20px;
+  max-width: 390px;
+  color: #536579;
+  font-size: 14px;
+}
+
+/* EMBEDDED YOUTUBE VIDEO */
+
+.compare-page .video-container {
+  width: 100%;
+  margin: 20px 0 0;
+}
+
+.compare-page .video-container iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: none;
+  border-radius: 12px;
+}
+
+/* STUDY TIPS */
+
+.compare-page .compare-tips-title {
+  margin: 28px 0 10px;
+  color: #20364a;
+  font-size: 20px;
+}
+
+.compare-page .compare-tips {
+  padding-left: 24px;
+  color: #536579;
+  font-size: 15px;
+}
+
+.compare-page .compare-tips li {
+  margin: 8px 0;
+}
+
+.compare-page .compare-explore-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* NOTES */
+
+.compare-page .note {
   color: #65758a;
   font-size: 13px;
   margin-top: 18px;
 }
 
-.video-container {
-  width: 100%;
-  margin: 20px 0;
+/* CLOSING SECTION */
+
+.compare-page .compare-closing {
+  padding: 50px 0;
+  background: #e5f3f1;
 }
 
-.video-container iframe {
-  display: block;
-  width: 100%;
-  height: 310px;
-  border: 0;
-  border-radius: 10px;
-  background: #101820;
+.compare-page .compare-closing-panel {
+  padding: 35px 25px;
+  text-align: center;
 }
 
-.study-video,
-.video-container video {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  border-radius: 10px;
-  background: #101820;
+.compare-page .compare-closing-panel h2 {
+  font-size: 28px;
+  margin: 0 0 10px;
+  color: #20364a;
 }
 
-/* =========================================
-   CONTACT FORM
-   ========================================= */
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
+.compare-page .compare-closing-panel p {
+  margin: 0 0 22px;
+  color: #536579;
 }
 
-.field {
-  margin-bottom: 18px;
+.compare-page .compare-closing-panel .button {
+  border-radius: 25px;
 }
 
-.field label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 6px;
+.compare-page .site-footer {
+  margin-top: 0;
 }
 
-.field input:not([type="checkbox"]),
-.field select,
-.field textarea {
-  display: block;
-  width: 100%;
-  padding: 11px;
-  border: 1px solid #b9c9d3;
-  border-radius: 7px;
-  background: #fff;
-  color: #243247;
+/* RESPONSIVE - COMPARE PAGE */
+
+@media (max-width: 900px) {
+  .compare-page .compare-info {
+    grid-template-columns: 1fr;
+  }
 }
 
-.field textarea {
-  resize: vertical;
-}
+@media (max-width: 600px) {
+  .compare-page .compare-intro {
+    padding: 40px 0;
+  }
 
-.field input:focus,
-.field textarea:focus,
-.field select:focus {
-  border-color: #0b8798;
-  outline: 2px solid #b7e6e8;
-}
+  .compare-page .compare-intro h1 {
+    font-size: 30px;
+  }
 
-.field .checkbox-label {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  font-weight: normal;
-  cursor: pointer;
-}
+  .compare-page .compare-filter-panel {
+    padding: 20px 16px 5px;
+  }
 
-.field input[type="checkbox"] {
-  width: auto;
-  margin: 6px 0 0;
-  flex-shrink: 0;
-}
+  .compare-page .compare-info .panel {
+    padding: 20px;
+  }
 
-.field .checkbox-label span {
-  flex: 1;
+  .compare-page .compare-closing-panel {
+    padding: 28px 18px;
+  }
 }
 
 /* =========================================
@@ -1770,7 +2003,6 @@ tbody tr:hover {
   }
 
   .hero-layout,
-  .info-layout,
   .compare-info {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -1993,7 +2225,6 @@ tbody tr:hover {
 
   .card-grid,
   .form-grid {
-    grid-template-columns: 1fr;
   }
 
   .page-intro {
