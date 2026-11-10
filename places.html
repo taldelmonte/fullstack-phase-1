@@ -7,360 +7,676 @@
   <title>StudySpot | Study Places</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="places-page">
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="logo" href="index.html">StudySpot</a>
-    <nav class="nav-links">
-      <a href="index.html">Home</a>
-      <a href="places.html" class="active">Study Places</a>
-      <a href="compare.html">Compare</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Suggest a Place</a>
-    </nav>
-  </div>
-</header>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">StudySpot</a>
 
-<main>
-
-  <!-- Page introduction -->
-  <section class="page-intro">
-    <div class="container">
-      <h1>Explore Study Places in Israel</h1>
-      <p>
-        Discover libraries, cafes and workspaces across Israel.
-        Find the right environment for your next study session.
-      </p>
-      <nav class="category-links">
-        <a href="#libraries">Libraries</a>
-        <a href="#cafes">Cafes</a>
-        <a href="#workspaces">Workspaces</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="places.html" class="active">Study Places</a>
+        <a href="compare.html">Compare</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Suggest a Place</a>
       </nav>
     </div>
-  </section>
+  </header>
 
-  <!-- Libraries -->
-  <section class="section" id="libraries">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Libraries</h2>
-        <p>Explore academic libraries and research spaces in different cities.</p>
+  <main>
+
+    <!-- PAGE INTRODUCTION -->
+    <section class="page-intro places-intro">
+      <div class="container places-intro-content">
+        <span class="places-eyebrow">DISCOVER YOUR NEXT STUDY SPOT</span>
+
+        <h1>Explore Study Places in Israel</h1>
+
+        <p>
+          From quiet libraries to cozy cafes and collaborative
+          workspaces, discover a place that matches your study style.
+        </p>
+
+        <nav class="category-links" aria-label="Study place categories">
+          <a href="#libraries">Libraries</a>
+          <a href="#cafes">Cafes</a>
+          <a href="#workspaces">Workspaces</a>
+        </nav>
+
+        <p class="places-intro-note">
+          40 places &bull; 3 categories &bull; Locations across Israel
+        </p>
       </div>
+    </section>
 
-      <div class="places-carousel">
+    <!-- LIBRARIES -->
+    <section class="section places-section libraries-section" id="libraries">
+      <div class="container">
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800" alt="Library bookshelves">
-          <div class="card-content">
-            <span class="tag">Jerusalem</span>
-            <h3>National Library of Israel</h3>
-            <p>A national library with reading rooms and research collections.</p>
-            <p><strong>Location:</strong> Kaplan Street 1, Jerusalem</p>
-            <p><strong>Best for:</strong> Reading and research</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=National+Library+of+Israel+Jerusalem" target="_blank">View Location</a>
+        <div class="places-section-header">
+          <div>
+            <span class="places-section-label">QUIET &amp; FOCUSED</span>
+            <h2>Libraries</h2>
+            <p>
+              Discover libraries for reading, research,
+              assignments and exam preparation.
+            </p>
           </div>
-        </article>
+          <span class="places-count">13 Places</span>
+        </div>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800" alt="Library reading room">
-          <div class="card-content">
-            <span class="tag">Ramat Gan</span>
-            <h3>Bar-Ilan Central Library</h3>
-            <p>The Wurzweiler Central Library at Bar-Ilan University.</p>
-            <p><strong>Location:</strong> Bar-Ilan University, Ramat Gan</p>
-            <p><strong>Best for:</strong> Academic research</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Wurzweiler+Central+Library+Bar+Ilan" target="_blank">View Location</a>
-          </div>
-        </article>
+        <div class="places-carousel" aria-label="Libraries">
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800" alt="Books on shelves">
-          <div class="card-content">
-            <span class="tag">Jerusalem</span>
-            <h3>Bloomfield Library</h3>
-            <p>A humanities and social sciences library at the Hebrew University.</p>
-            <p><strong>Location:</strong> Mount Scopus, Jerusalem</p>
-            <p><strong>Best for:</strong> Academic study</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Bloomfield+Library+Mount+Scopus" target="_blank">View Location</a>
-          </div>
-        </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=800" alt="Library bookshelves" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>National Library of Israel</h3>
+              <p>A national library with reading rooms and research collections.</p>
+              <p class="place-best">Reading &amp; Research</p>
+              <p class="place-location"><strong>Location:</strong> Kaplan Street 1, Jerusalem</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=National+Library+of+Israel+Jerusalem" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800" alt="Open books on a desk">
-          <div class="card-content">
-            <span class="tag">Tel Aviv</span>
-            <h3>Sourasky Central Library</h3>
-            <p>The central academic library at Tel Aviv University.</p>
-            <p><strong>Location:</strong> Tel Aviv University, Ramat Aviv</p>
-            <p><strong>Best for:</strong> Research and reading</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Sourasky+Central+Library+Tel+Aviv" target="_blank">View Location</a>
-          </div>
-        </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=800" alt="Library reading room" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Ramat Gan</span>
+              <h3>Bar-Ilan Central Library</h3>
+              <p>The Wurzweiler Central Library at Bar-Ilan University.</p>
+              <p class="place-best">Academic Research</p>
+              <p class="place-location"><strong>Location:</strong> Bar-Ilan University, Ramat Gan</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Wurzweiler+Central+Library+Bar+Ilan" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800" alt="Books and study materials">
-          <div class="card-content">
-            <span class="tag">Haifa</span>
-            <h3>University of Haifa Library</h3>
-            <p>The university's main academic library and information center.</p>
-            <p><strong>Location:</strong> University of Haifa, Haifa</p>
-            <p><strong>Best for:</strong> Research</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=University+of+Haifa+Library" target="_blank">View Location</a>
-          </div>
-        </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800" alt="Books on a shelf" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>Bloomfield Library</h3>
+              <p>A humanities and social sciences library at the Hebrew University.</p>
+              <p class="place-best">Academic Study</p>
+              <p class="place-location"><strong>Location:</strong> Mount Scopus, Jerusalem</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Bloomfield+Library+Mount+Scopus" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
 
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?w=800" alt="Collection of books">
-          <div class="card-content">
-            <span class="tag">Beer Sheva</span>
-            <h3>Aranne Library</h3>
-            <p>The central academic library at Ben-Gurion University.</p>
-            <p><strong>Location:</strong> Ben-Gurion University, Beer Sheva</p>
-            <p><strong>Best for:</strong> Academic study</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Aranne+Library+Beer+Sheva" target="_blank">View Location</a>
-          </div>
-        </article>
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=800" alt="Open books on a desk" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>Sourasky Central Library</h3>
+              <p>The central academic library at Tel Aviv University.</p>
+              <p class="place-best">Research &amp; Reading</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv University, Ramat Aviv</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Sourasky+Central+Library+Tel+Aviv" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
 
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800" alt="Study materials on a desk" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Haifa</span>
+              <h3>University of Haifa Library</h3>
+              <p>The university's main academic library and information center.</p>
+              <p class="place-best">Academic Research</p>
+              <p class="place-location"><strong>Location:</strong> University of Haifa, Haifa</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=University+of+Haifa+Library" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800" alt="Tall bookshelves inside a library" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Beer Sheva</span>
+              <h3>Aranne Library</h3>
+              <p>The central academic library at Ben-Gurion University.</p>
+              <p class="place-best">Academic Study</p>
+              <p class="place-location"><strong>Location:</strong> Ben-Gurion University, Beer Sheva</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Aranne+Library+Beer+Sheva" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800" alt="Books arranged on shelves" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>Jerusalem Central Library</h3>
+              <p>A public library option for books, reading and independent learning.</p>
+              <p class="place-best">Quiet Reading</p>
+              <p class="place-location"><strong>Location:</strong> Jerusalem</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Jerusalem+Central+Municipal+Library" target="_blank" rel="noopener noreferrer">Find Library</a>
+            </div>
+          </article>
+
+          <article class="card">
+            
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9R1IxzlExwOsstCMHC-fp9WLp-t_63Snyny0eU4si2W_JNTW37bh8YJMKknodZGo7Fs5Ci3LCEAIV_Jn26khGpwkeJnNWxz6WpNL1Nk4Bde1fSe0fz8rdsXh42CoguOkDRSxXo=s1360-w1360-h1020-rw" alt="Beit Ariela Library in Tel Aviv" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>Beit Ariela Library</h3>
+              <p>A major municipal library with collections and reading spaces.</p>
+              <p class="place-best">Reading &amp; Study</p>
+              <p class="place-location"><strong>Location:</strong> Shaul Hamelech Boulevard, Tel Aviv</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Beit+Ariela+Library+Tel+Aviv" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1494809610410-160faaed4de0?w=800" alt="Books and notebook on a table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Rehovot</span>
+              <h3>Weizmann Institute Library</h3>
+              <p>A research-focused library serving the Weizmann Institute.</p>
+              <p class="place-best">Scientific Research</p>
+              <p class="place-location"><strong>Location:</strong> Weizmann Institute, Rehovot</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Weizmann+Institute+Library+Rehovot" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?w=800" alt="Open book in a quiet setting" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Haifa</span>
+              <h3>Technion Central Library</h3>
+              <p>An academic library supporting science and engineering studies.</p>
+              <p class="place-best">Engineering Study</p>
+              <p class="place-location"><strong>Location:</strong> Technion, Haifa</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Technion+Central+Library+Haifa" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800" alt="Book and reading materials" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Herzliya</span>
+              <h3>Herzliya Municipal Library</h3>
+              <p>A public library option for reading and individual study.</p>
+              <p class="place-best">Independent Study</p>
+              <p class="place-location"><strong>Location:</strong> Herzliya</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Herzliya+Municipal+Library" target="_blank" rel="noopener noreferrer">Find Library</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=800" alt="Stack of books" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Netanya</span>
+              <h3>Netanya Municipal Library</h3>
+              <p>A city library network offering books and community reading resources.</p>
+              <p class="place-best">Reading &amp; Learning</p>
+              <p class="place-location"><strong>Location:</strong> Netanya</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Netanya+Municipal+Library" target="_blank" rel="noopener noreferrer">Find Library</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?w=800" alt="Book resting on a table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Rishon LeZion</span>
+              <h3>Kotar Rishon Library</h3>
+              <p>A municipal library and cultural center with reading resources.</p>
+              <p class="place-best">Reading &amp; Research</p>
+              <p class="place-location"><strong>Location:</strong> Rishon LeZion</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Kotar+Rishon+Library+Rishon+LeZion" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="carousel-hint">
+          Scroll sideways to explore all 13 libraries.
+        </p>
       </div>
-      <p class="carousel-hint">Scroll sideways to explore all six libraries.</p>
+    </section>
+
+    <!-- CAFES -->
+    <section class="section places-section cafes-section" id="cafes">
+      <div class="container">
+
+        <div class="places-section-header">
+          <div>
+            <span class="places-section-label">COFFEE &amp; CREATIVITY</span>
+            <h2>Cafes</h2>
+            <p>
+              Find a comfortable place for reading,
+              casual studying and coffee breaks.
+            </p>
+          </div>
+          <span class="places-count">16 Places</span>
+        </div>
+
+        <div class="places-carousel" aria-label="Cafes">
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Cozy cafe interior" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>Harry's Cafe</h3>
+              <p>A cafe associated with the National Library of Israel.</p>
+              <p class="place-best">Coffee Breaks</p>
+              <p class="place-location"><strong>Location:</strong> National Library, Jerusalem</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Harrys+Cafe+National+Library+Jerusalem" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800" alt="Coffee on a table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>Cafe Landwer</h3>
+              <p>An Israeli cafe chain with branches in Tel Aviv.</p>
+              <p class="place-best">Casual Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv branches</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Landwer+Tel+Aviv" target="_blank" rel="noopener noreferrer">Find Branches</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800" alt="Coffee shop counter" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>Aroma Espresso Bar</h3>
+              <p>A well-known Israeli coffee chain with locations around Jerusalem.</p>
+              <p class="place-best">Informal Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Jerusalem branches</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Aroma+Espresso+Bar+Jerusalem" target="_blank" rel="noopener noreferrer">Find Branches</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800" alt="Coffee cups on a table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Haifa</span>
+              <h3>Cafe Joe - Haifa</h3>
+              <p>A cafe option for refreshments and informal conversations.</p>
+              <p class="place-best">Coffee Breaks</p>
+              <p class="place-location"><strong>Location:</strong> Haifa area</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Joe+Haifa" target="_blank" rel="noopener noreferrer">Find Branches</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800" alt="Iced coffee" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Bat Yam</span>
+              <h3>Cafe Joe - Bat Yam</h3>
+              <p>A cafe option near the Bat Yam coastal area.</p>
+              <p class="place-best">Relaxed Breaks</p>
+              <p class="place-location"><strong>Location:</strong> Bat Yam</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Joe+Bat+Yam" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800" alt="Freshly prepared coffee" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Ra'anana</span>
+              <h3>Arcaffe - Ra'anana</h3>
+              <p>A cafe chain offering coffee, pastries and seating.</p>
+              <p class="place-best">Reading &amp; Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Ra'anana</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Arcaffe+Raanana" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Cup of coffee" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Netanya</span>
+              <h3>Arcaffe - Poleg</h3>
+              <p>A cafe option in the Netanya and Poleg area.</p>
+              <p class="place-best">Informal Work</p>
+              <p class="place-location"><strong>Location:</strong> Poleg, Netanya</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Arcaffe+Poleg+Netanya" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800" alt="Cafe seating" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Ramat Gan</span>
+              <h3>Cafe Joe - Ramat Gan</h3>
+              <p>A cafe option for coffee breaks and casual meetings.</p>
+              <p class="place-best">Casual Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Ramat Gan</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Joe+Ramat+Gan" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?w=800" alt="Coffee cup on a wooden table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>Cafe Nahat</h3>
+              <p>A Tel Aviv coffee spot known for its coffee-focused atmosphere.</p>
+              <p class="place-best">Coffee &amp; Reading</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Nahat+Tel+Aviv" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1493857671505-72967e2e2760?w=800" alt="Warm cafe interior" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>Tmol Shilshom</h3>
+              <p>A literary cafe combining books, food and a relaxed atmosphere.</p>
+              <p class="place-best">Reading &amp; Inspiration</p>
+              <p class="place-location"><strong>Location:</strong> Jerusalem city center</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Tmol+Shilshom+Jerusalem" target="_blank" rel="noopener noreferrer">View Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=800" alt="Cafe with tables and chairs" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Haifa</span>
+              <h3>Greg Cafe - Haifa</h3>
+              <p>A cafe chain option for refreshments and informal study breaks.</p>
+              <p class="place-best">Casual Study</p>
+              <p class="place-location"><strong>Location:</strong> Haifa branches</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Greg+Cafe+Haifa" target="_blank" rel="noopener noreferrer">Find Branches</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1507133750040-4a8f57021571?w=800" alt="Fresh coffee preparation" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Beer Sheva</span>
+              <h3>Aroma - Beer Sheva</h3>
+              <p>A familiar coffee chain option in the southern city.</p>
+              <p class="place-best">Coffee Breaks</p>
+              <p class="place-location"><strong>Location:</strong> Beer Sheva branches</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Aroma+Espresso+Bar+Beer+Sheva" target="_blank" rel="noopener noreferrer">Find Branches</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800" alt="Coffee and cafe table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Eilat</span>
+              <h3>Cafe Cafe - Eilat</h3>
+              <p>A cafe chain option for coffee and informal conversations.</p>
+              <p class="place-best">Relaxed Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Eilat</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Cafe+Eilat" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1464979681340-bdd28a61699e?w=800" alt="Coffee in a cafe setting" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Herzliya</span>
+              <h3>Landwer - Herzliya</h3>
+              <p>A cafe chain option for a light meal and study break.</p>
+              <p class="place-best">Casual Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Herzliya</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Landwer+Herzliya" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=800" alt="Roasted coffee beans" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Ashdod</span>
+              <h3>Greg Cafe - Ashdod</h3>
+              <p>A cafe chain option for refreshments and short study sessions.</p>
+              <p class="place-best">Coffee &amp; Conversation</p>
+              <p class="place-location"><strong>Location:</strong> Ashdod</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Greg+Cafe+Ashdod" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=800" alt="Coffee and pastry on a table" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Rishon LeZion</span>
+              <h3>Arcaffe - Rishon LeZion</h3>
+              <p>A coffee chain option for breaks and informal work.</p>
+              <p class="place-best">Reading &amp; Coffee</p>
+              <p class="place-location"><strong>Location:</strong> Rishon LeZion</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Arcaffe+Rishon+LeZion" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="carousel-hint">
+          Scroll sideways to explore all 16 cafes.
+          Seating and laptop policies may vary by location.
+        </p>
+      </div>
+    </section>
+
+    <!-- WORKSPACES -->
+    <section class="section places-section workspaces-section" id="workspaces">
+      <div class="container">
+
+        <div class="places-section-header">
+          <div>
+            <span class="places-section-label">WORK &amp; COLLABORATE</span>
+            <h2>Workspaces</h2>
+            <p>
+              Explore shared offices and professional spaces
+              for projects, meetings and teamwork.
+            </p>
+          </div>
+          <span class="places-count">11 Places</span>
+        </div>
+
+        <div class="places-carousel" aria-label="Workspaces">
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800" alt="Modern shared office" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>WeWork - Tel Aviv</h3>
+              <p>Flexible offices and shared workspace locations.</p>
+              <p class="place-best">Professional Work</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv branches</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=WeWork+Tel+Aviv" target="_blank" rel="noopener noreferrer">Find Locations</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800" alt="Bright collaborative workspace" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>Mindspace - Tel Aviv</h3>
+              <p>Shared workspaces designed for professional collaboration.</p>
+              <p class="place-best">Teamwork</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv branches</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Mindspace+Tel+Aviv" target="_blank" rel="noopener noreferrer">Find Locations</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=800" alt="Open office interior" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>Regus - Tel Aviv</h3>
+              <p>Flexible offices and business workspaces.</p>
+              <p class="place-best">Professional Work</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv area</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Regus+Tel+Aviv" target="_blank" rel="noopener noreferrer">Find Locations</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800" alt="Modern meeting room" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Tel Aviv</span>
+              <h3>ROOMS by Fattal</h3>
+              <p>Flexible offices and professional meeting spaces.</p>
+              <p class="place-best">Meetings &amp; Focus</p>
+              <p class="place-location"><strong>Location:</strong> Tel Aviv</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=ROOMS+by+Fattal+Tel+Aviv" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Shared office desks" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>Urban Place - Jerusalem</h3>
+              <p>A coworking option to check for shared office facilities.</p>
+              <p class="place-best">Collaborative Projects</p>
+              <p class="place-location"><strong>Location:</strong> Jerusalem area</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Urban+Place+Jerusalem" target="_blank" rel="noopener noreferrer">Check Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800" alt="Shared desks in an office" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Petah Tikva</span>
+              <h3>ROOMS - Petah Tikva</h3>
+              <p>Flexible workspaces and professional office facilities.</p>
+              <p class="place-best">Teamwork &amp; Meetings</p>
+              <p class="place-location"><strong>Location:</strong> Petah Tikva</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=ROOMS+Petah+Tikva" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+              <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9RzjRI0pGu-cV5ckrTVr96jWsP4ZGkEKbpG_gKvMUY9oMARvTYx0s_HnMtnN739oYogPojAWozcCbbNjqGGRBj5HsqYO61V_3fomp7JOyzlMdZ31jMOHL5mZQRIC_OvSlXk084=s1360-w1360-h1020-rw" alt="WeWork Jerusalem coworking space" loading="lazy">            <div class="card-content">
+              <span class="tag">Jerusalem</span>
+              <h3>WeWork - Jerusalem</h3>
+              <p>A flexible workspace option for professional projects.</p>
+              <p class="place-best">Team Projects</p>
+              <p class="place-location"><strong>Location:</strong> Jerusalem</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=WeWork+Jerusalem" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=900&amp;crop=entropy" alt="Contemporary office environment" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Haifa</span>
+              <h3>Regus - Haifa</h3>
+              <p>Flexible office facilities for independent and team work.</p>
+              <p class="place-best">Professional Projects</p>
+              <p class="place-location"><strong>Location:</strong> Haifa</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Regus+Haifa" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&amp;crop=entropy" alt="Office with natural light" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Herzliya</span>
+              <h3>WeWork - Herzliya</h3>
+              <p>Shared workspace options in the Herzliya business area.</p>
+              <p class="place-best">Collaboration</p>
+              <p class="place-location"><strong>Location:</strong> Herzliya</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=WeWork+Herzliya" target="_blank" rel="noopener noreferrer">Find Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=900&amp;crop=entropy" alt="Bright shared office area" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Beer Sheva</span>
+              <h3>Regus - Beer Sheva</h3>
+              <p>A flexible office option to check in southern Israel.</p>
+              <p class="place-best">Focused Work</p>
+              <p class="place-location"><strong>Location:</strong> Beer Sheva</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Regus+Beer+Sheva" target="_blank" rel="noopener noreferrer">Check Location</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=900&amp;crop=entropy" alt="Meeting area with office furniture" loading="lazy">
+            <div class="card-content">
+              <span class="tag">Ramat Gan</span>
+              <h3>Mindspace - Ramat Gan</h3>
+              <p>A coworking option in the greater Tel Aviv business area.</p>
+              <p class="place-best">Meetings &amp; Teamwork</p>
+              <p class="place-location"><strong>Location:</strong> Ramat Gan area</p>
+              <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Mindspace+Ramat+Gan" target="_blank" rel="noopener noreferrer">Check Location</a>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="carousel-hint">
+          Scroll sideways to explore all 11 workspaces.
+          Booking or membership may be required.
+        </p>
+      </div>
+    </section>
+
+    <!-- BEFORE YOU VISIT -->
+    <section class="section places-visit-section">
+      <div class="container">
+        <div class="places-visit-panel">
+
+          <div class="places-visit-heading">
+            <span class="places-section-label">GOOD TO KNOW</span>
+            <h2>Before You Visit</h2>
+            <p>A few quick checks can make your study session easier.</p>
+          </div>
+
+          <div class="places-visit-grid">
+
+            <div class="places-visit-item">
+              <span class="visit-number">01</span>
+              <div>
+                <h3>Opening Hours</h3>
+                <p>Check the opening hours before leaving home.</p>
+              </div>
+            </div>
+
+            <div class="places-visit-item">
+              <span class="visit-number">02</span>
+              <div>
+                <h3>Entry &amp; Booking</h3>
+                <p>Some libraries and workspaces require permission or booking.</p>
+              </div>
+            </div>
+
+            <div class="places-visit-item">
+              <span class="visit-number">03</span>
+              <div>
+                <h3>Study Conditions</h3>
+                <p>Confirm seating, Wi-Fi and laptop policies when needed.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="places-visit-note">
+            Images are illustrative. Business details and availability may change.
+          </p>
+
+          <div class="places-visit-action">
+            <a class="button" href="compare.html">Compare Study Places</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <span>StudySpot &copy; 2026 | Student Project</span>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="places.html">Study Places</a>
+        <a href="compare.html">Compare</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Suggest a Place</a>
+      </div>
     </div>
-  </section>
-
-  <!-- Cafes -->
-  <section class="section" id="cafes">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Cafes</h2>
-        <p>Explore cafes for reading, coffee breaks and informal meetings.</p>
-      </div>
-
-      <div class="places-carousel">
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800" alt="Cafe interior">
-          <div class="card-content">
-            <span class="tag">Jerusalem</span>
-            <h3>Harry's Cafe</h3>
-            <p>A cafe located inside the National Library of Israel.</p>
-            <p><strong>Location:</strong> Kaplan Street 1, Jerusalem</p>
-            <p><strong>Best for:</strong> Coffee breaks</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Harrys+Cafe+National+Library+Jerusalem" target="_blank">View Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=800" alt="Coffee on a table">
-          <div class="card-content">
-            <span class="tag">Tel Aviv</span>
-            <h3>Cafe Landwer</h3>
-            <p>An Israeli cafe chain with branches in Tel Aviv.</p>
-            <p><strong>Location:</strong> Tel Aviv branches</p>
-            <p><strong>Best for:</strong> Casual meetings</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Landwer+Tel+Aviv" target="_blank">Find Branches</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=800" alt="Coffee shop counter">
-          <div class="card-content">
-            <span class="tag">Jerusalem</span>
-            <h3>Aroma Espresso Bar</h3>
-            <p>A well-known Israeli coffee chain with branches in Jerusalem.</p>
-            <p><strong>Location:</strong> Jerusalem branches</p>
-            <p><strong>Best for:</strong> Informal meetings</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Aroma+Espresso+Bar+Jerusalem" target="_blank">Find Branches</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800" alt="Coffee cups on a table">
-          <div class="card-content">
-            <span class="tag">Haifa</span>
-            <h3>Cafe Joe - University of Haifa</h3>
-            <p>A coffee shop associated with the university campus.</p>
-            <p><strong>Location:</strong> University of Haifa, Haifa</p>
-            <p><strong>Best for:</strong> Campus coffee breaks</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Joe+University+of+Haifa" target="_blank">View Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800" alt="Iced coffee">
-          <div class="card-content">
-            <span class="tag">Bat Yam</span>
-            <h3>Cafe Joe - Bat Yam</h3>
-            <p>A cafe near the Bat Yam seafront.</p>
-            <p><strong>Location:</strong> Ben Gurion Street 69, Bat Yam</p>
-            <p><strong>Best for:</strong> Relaxed coffee breaks</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Joe+Ben+Gurion+69+Bat+Yam" target="_blank">View Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=800" alt="Freshly prepared coffee">
-          <div class="card-content">
-            <span class="tag">Ra'anana</span>
-            <h3>Arcaffe - Ra'anana</h3>
-            <p>A cafe with coffee, pastries and seating.</p>
-            <p><strong>Location:</strong> Jerusalem Road 34, Ra'anana</p>
-            <p><strong>Best for:</strong> Reading and short meetings</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Arcaffe+Jerusalem+34+Raanana" target="_blank">View Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800" alt="Cup of coffee">
-          <div class="card-content">
-            <span class="tag">Netanya</span>
-            <h3>Arcaffe - Poleg</h3>
-            <p>A cafe in the Poleg commercial area.</p>
-            <p><strong>Location:</strong> Bnei Gaon Street 10, Netanya</p>
-            <p><strong>Best for:</strong> Informal work</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Arcaffe+Bnei+Gaon+10+Netanya" target="_blank">View Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800" alt="Coffee shop seating">
-          <div class="card-content">
-            <span class="tag">Ramat Gan</span>
-            <h3>Cafe Joe - Marom Naveh</h3>
-            <p>A neighborhood coffee shop in Ramat Gan.</p>
-            <p><strong>Location:</strong> Haim Landau Street 7, Ramat Gan</p>
-            <p><strong>Best for:</strong> Casual meetings</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Cafe+Joe+Haim+Landau+7+Ramat+Gan" target="_blank">View Location</a>
-          </div>
-        </article>
-
-      </div>
-      <p class="carousel-hint">
-        Scroll sideways to explore all eight cafes.
-        Seating and laptop policies may vary by location.
-      </p>
-    </div>
-  </section>
-
-  <!-- Workspaces -->
-  <section class="section" id="workspaces">
-    <div class="container">
-      <div class="section-heading">
-        <h2>Workspaces</h2>
-        <p>Explore shared offices and collaborative environments.</p>
-      </div>
-
-      <div class="places-carousel">
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800" alt="Modern shared office">
-          <div class="card-content">
-            <span class="tag">Tel Aviv</span>
-            <h3>WeWork</h3>
-            <p>Flexible offices and shared workspace locations.</p>
-            <p><strong>Location:</strong> Tel Aviv branches</p>
-            <p><strong>Best for:</strong> Professional work</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=WeWork+Tel+Aviv" target="_blank">Find Locations</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800" alt="Bright collaborative workspace">
-          <div class="card-content">
-            <span class="tag">Tel Aviv</span>
-            <h3>Mindspace</h3>
-            <p>Shared workspaces designed for professional collaboration.</p>
-            <p><strong>Location:</strong> Tel Aviv branches</p>
-            <p><strong>Best for:</strong> Teamwork</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Mindspace+Tel+Aviv" target="_blank">Find Locations</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?w=800" alt="Open office interior">
-          <div class="card-content">
-            <span class="tag">Tel Aviv</span>
-            <h3>Regus</h3>
-            <p>Flexible offices and business workspaces.</p>
-            <p><strong>Location:</strong> Tel Aviv area</p>
-            <p><strong>Best for:</strong> Professional work</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Regus+Tel+Aviv" target="_blank">Find Locations</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800" alt="Modern meeting room">
-          <div class="card-content">
-            <span class="tag">Tel Aviv</span>
-            <h3>ROOMS by Fattal</h3>
-            <p>Flexible offices and professional meeting spaces.</p>
-            <p><strong>Location:</strong> Lincoln Street 20, Tel Aviv</p>
-            <p><strong>Best for:</strong> Meetings and focused work</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=ROOMS+Lincoln+20+Tel+Aviv" target="_blank">View Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" alt="Shared office desks">
-          <div class="card-content">
-            <span class="tag">Jerusalem</span>
-            <h3>Urban Place</h3>
-            <p>Shared office and coworking facilities.</p>
-            <p><strong>Location:</strong> Jerusalem</p>
-            <p><strong>Best for:</strong> Collaborative projects</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=Urban+Place+Jerusalem" target="_blank">Find Location</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800" alt="Shared desks in an office">
-          <div class="card-content">
-            <span class="tag">Petah Tikva</span>
-            <h3>ROOMS - Petah Tikva</h3>
-            <p>Flexible workspaces and office facilities.</p>
-            <p><strong>Location:</strong> Hasham Street 3, Petah Tikva</p>
-            <p><strong>Best for:</strong> Teamwork and meetings</p>
-            <a class="button" href="https://www.google.com/maps/search/?api=1&amp;query=ROOMS+Hasham+3+Petah+Tikva" target="_blank">View Location</a>
-          </div>
-        </article>
-
-      </div>
-      <p class="carousel-hint">
-        Scroll sideways to explore all six workspaces.
-        Booking or membership may be required.
-      </p>
-    </div>
-  </section>
-
-  <!-- Visitor information -->
-  <section class="section">
-    <div class="container panel">
-      <h2>Before You Visit</h2>
-      <p>
-        Some libraries require identification or special visitor
-        permission. Workspaces may require booking or membership.
-      </p>
-      <p>
-        Images are illustrative. Check opening hours, availability,
-        addresses and visitor rules before visiting.
-      </p>
-      <a class="button" href="compare.html">Compare Study Places</a>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-layout">
-    <span>StudySpot © 2026 | Student Project</span>
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="places.html">Study Places</a>
-      <a href="compare.html">Compare</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Suggest a Place</a>
-    </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>
